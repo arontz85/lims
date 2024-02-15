@@ -1,4 +1,4 @@
-# lims is a Library Information Management System Project 
+# Library Information Management System
 # Developed by Aron Zeru
 This Library Information Management System runs on Django Framework in the back-end and HTML, and CSS in the front-end.
 
