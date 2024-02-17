@@ -2,8 +2,8 @@
 # Developed by Aron Zeru
 This Library Information Management System runs on Django Framework Sqlite3(later will be changed to PostgreSQL) database in the back-end and HTML, and CSS in the front-end.
 
-**Features:**
-This is a Library Information Management System which contains the following features
+**Features:**\n
+This is a Library Information Management System which contains the following features\n
 =>Home page that contains general information about the system. 
 =>Readers page – In this feature, the admin can manage all the information of the readers including, “adding new readers”, “updating or modifying readers' data” and “deleting readers' data from the database“.
 =>Books page – In this feature, the admin can manage all the information of books including, “adding new books”, “updating or modifying books' data” "Issuing books' to readers" and “deleting books' data from the database“.
