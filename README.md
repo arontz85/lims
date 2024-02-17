@@ -12,7 +12,7 @@ This is a Library Information Management System which contains the following fea
 
 **Steps to run the project:**  
 **Step One:** download and _extract/unzip_ the **LibraryInformationManagementSystem** folder.    
-**Step Two:** Open your _VScode editor_ and navigate to the **LibraryInformationManagementSystem** folder.    
+**Step Two:** Open your _VScode editor_ and navigate to the **LibraryInformationManagementSystem/lims** folder.    
 **Step Three:** type "_python -m venv PythonEnv_" # This will create the virtual environment with folder name PythonEnv.  
 **Step Four:** type "_PythonEnv\Scripts\activate_" and press Enter key on the keyboard #_This will activate the virtual environment._   
 **Step Five:** type "_python -m pip install Django_" # This will install Django Framework.  
