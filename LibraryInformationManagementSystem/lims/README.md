@@ -21,7 +21,7 @@ This is a Library Information Management System which contains the following fea
 **Step Eight:** type "_python manage.py migrate._"  and press Enter key on the keyboard.  
 **Step Nine:** type "_python manage.py runserver 8080_" press Enter key on the keyboard # _This will make the project to run on port 8080._    
 
-**The result on your command line will be as follows**
+**The result on your command line will look like be as follows:**  
 PS C:\Users\Aaron\Downloads\lims-main\lims-main\LibraryInformationManagementSystem\lims> python -m venv PythonEnv  
 PS C:\Users\Aaron\Downloads\lims-main\lims-main\LibraryInformationManagementSystem\lims> PythonEnv\Scripts\activate  
 (PythonEnv) PS C:\Users\Aaron\Downloads\lims-main\lims-main\LibraryInformationManagementSystem\lims> python -m pip install Django  
@@ -67,6 +67,6 @@ Django version 5.0.2, using settings 'lims_portal.settings'
 Starting development server at http://127.0.0.1:8080/  
 Quit the server with CTRL-BREAK.    
 
-**The result on your web browser will be as follows:**
+**The result on your web browser will be as below:**
 
 ![image](https://github.com/arontz85/lims/assets/156838915/be1d6eb3-a8e0-41ee-b97c-1c1d62242b41)
