@@ -65,6 +65,8 @@ System check identified no issues (0 silenced).
 February 17, 2024 - 08:51:18  
 Django version 5.0.2, using settings 'lims_portal.settings'  
 Starting development server at http://127.0.0.1:8080/  
-Quit the server with CTRL-BREAK.  
+Quit the server with CTRL-BREAK.    
+
+**The result on your web browser will be as follows:**
 
 ![image](https://github.com/arontz85/lims/assets/156838915/be1d6eb3-a8e0-41ee-b97c-1c1d62242b41)
