@@ -11,8 +11,8 @@ This is a Library Information Management System which contains the following fea
 =>**Login/Logout System** – With this feature, the user can log-in and log-out of the system.  
 
 **Steps to run the project:**  
-**Step one:** download and extract/unzip the LibraryInformationManagementSystem folder.  
-**Step two:** Open your VScode editor and navigate to the LibraryInformationManagementSystem folder.  
-**Step three:** type "PythonEnv\Scripts\activate" and press Enter key on the keyboard #This will activate the virtual environment.  
-**Step Four:** type "cd lims_portal" and press Enter key on the keyboard # This will change the directory to the project folder.  
-**Step Five:** type "python manage.py runserver 8080" press Enter key on the keyboard # This will make the project to run on port 8080.  
+**Step one:** download and _extract/unzip_ the **LibraryInformationManagementSystem** folder.  
+**Step two:** Open your _VScode editor_ and navigate to the **LibraryInformationManagementSystem** folder.  
+**Step three:** type "_PythonEnv\Scripts\activate_" and press Enter key on the keyboard #_This will activate the virtual environment._  
+**Step Four:** type "_cd lims_portal_" and press Enter key on the keyboard # _This will change the directory to the project folder._  
+**Step Five:** type "_python manage.py runserver 8080_" press Enter key on the keyboard # _This will make the project to run on port 8080._  
