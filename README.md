@@ -1,6 +1,6 @@
 # Library Information Management System
 # Developed by Aron Zeru
-This Library Information Management System runs on Django Framework Sqlite3(later will be changed to PostgreSQL) database in the back-end and HTML, and CSS in the front-end.  
+This Library Information Management System runs on Django Framework. Sqlite3(later will be changed to PostgreSQL) database in the back-end and HTML, and CSS in the front-end.  
 
 **Features:**  
 This is a Library Information Management System which contains the following features  
@@ -11,8 +11,12 @@ This is a Library Information Management System which contains the following fea
 =>**Login/Logout System** – With this feature, the user can log-in and log-out of the system.  
 
 **Steps to run the project:**  
-**Step one:** download and _extract/unzip_ the **LibraryInformationManagementSystem** folder.  
-**Step two:** Open your _VScode editor_ and navigate to the **LibraryInformationManagementSystem** folder.  
-**Step three:** type "_PythonEnv\Scripts\activate_" and press Enter key on the keyboard #_This will activate the virtual environment._  
-**Step Four:** type "_cd lims_portal_" and press Enter key on the keyboard # _This will change the directory to the project folder._  
-**Step Five:** type "_python manage.py runserver 8080_" press Enter key on the keyboard # _This will make the project to run on port 8080._  
+**Step One:** download and _extract/unzip_ the **LibraryInformationManagementSystem** folder.    
+**Step Two:** Open your _VScode editor_ and navigate to the **LibraryInformationManagementSystem** folder.    
+**Step Three:** type "_python -m venv PythonEnv_" # This will create the virtual environment with folder name PythonEnv.  
+**Step Four:** type "_PythonEnv\Scripts\activate_" and press Enter key on the keyboard #_This will activate the virtual environment._   
+**Step Five:** type "_python -m pip install Django_" # This will install Django Framework.  
+**Step Six:** type "_cd lims_portal_" and press Enter key on the keyboard # _This will change the directory to the project folder._    
+**Step Seven:** type "_python manage.py makemigrations lims_app._"  and press Enter key on the keyboard.  
+**Step Eight:** type "_python manage.py migrate._"  and press Enter key on the keyboard.  
+**Step Nine:** type "_python manage.py runserver 8080_" press Enter key on the keyboard # _This will make the project to run on port 8080._    
