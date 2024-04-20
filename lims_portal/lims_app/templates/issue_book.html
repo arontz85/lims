@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content%}
+<html>
+<head>
+    <Title>Issue Books To Readers</Title>
+    
+</head>
+<body>
+    <center>
+        
+    <select>
+       <option selected disabled="true">------Readers Name------</option>
+        
+
+        {% for read in borrower%}
+        
+        <option>{{read.reading.all}} </option>
+       
+        {% endfor %}
+
+        
+       
+    </select>
+    <select>
+        <option selected disabled="true">------Books Title------</option>
+         
+  
+         {% for issued in issue%}
+         
+         <option>{{issued.book_title}} </option>
+        
+         {% endfor %}
+        
+     </select>
+   
+   </center> 
+</body>
+</html>
+
+
+
+
+
+{% endblock %}

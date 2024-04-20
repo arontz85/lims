@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+
+.frm{
+  padding: 10px;
+  background-color: rgba(227, 225, 238, 0.616);
+  border: #000 1px dotted;
+  margin-top: 0px;
+  align-content: center;
+}
+.txt{
+ width:80%;
+ height: 10%;
+ background-color: rgb(196, 194, 194);
+ color: #000;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ border-radius: 2%;
+ border: 0px;
+}
+.txtarea{
+  width:80%;
+  height:fit-content;
+  background-color:rgb(196, 194, 194);
+  color: #000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 2%;
+  border: 0px;
+}
+.btn{
+  background-color: rgb(175, 236, 160);
+  color: #fff;
+  height: 10%;
+  width: fit-content;
+  text-transform: uppercase;
+  font-size: medium;
+  border-radius: 10%;
+  
+}
+

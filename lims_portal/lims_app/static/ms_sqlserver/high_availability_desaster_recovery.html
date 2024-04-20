@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<title>Zeal For Wisdom</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML, CSS, Components of Computers, Cisco Networking, Microsoft Office Applications, Microsoft SQL Server Addministration and English Language">
+<meta name="Description" content="A simple learning website for students who are interested on studying HTML, CSS, Components of Computers, Cisco Networking, Microsoft Office Applications, Microsoft SQL Server Addministration and English Language">
+<meta property="og:image" content="../images/ari-icon.ico">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:description" content="atz-Zeal For Wisdom helps students on learning basick skills of HTML, CSS, Components of Computers, Cisco Networking, Microsoft Office Applications, Microsoft SQL Server Addministration and English Language">
+<link rel="icon" href="../images/ari-icon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../css/main.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<style>
+  
+#darkmodemenu {
+  position:absolute;
+  top:-40px;
+  right:16px;
+  padding:5px 20px 10px 18px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  z-index:-1;
+  transition: top 0.2s;
+  user-select: none;
+}
+#darkmodemenu input,#darkmodemenu label {
+  cursor:pointer;
+}
+</style>
+
+<div id="pagetop" class="atz-bar atz-card-2 notranslate">
+  <a href="../../welcome" class="atz-bar-item atz-button atz-hover-none atz-left atz-padding-16" title="Home" style="width:77px">
+    <img src="../images/ari-icon.ico">
+   
+  </a>
+
+  <script>
+    function openLangTab(evtEd, codeName) {
+      var indexEditor, proglanguage, progtablinks;
+      proglanguage = document.getElementsByClassName("proglang");
+      for (indexEditor = 0; indexEditor < proglanguage.length; indexEditor++) {
+        proglanguage[indexEditor].style.display = "none";
+      }
+      progtablinks = document.getElementsByClassName("codeeditorbr-tablink");
+      for (indexEditor = 0; indexEditor < proglanguage.length; indexEditor++) {
+        progtablinks[indexEditor].className = progtablinks[indexEditor].className.replace(" ws-grey", "");
+      }
+      document.getElementById(codeName).style.display = "block";
+      evtEd.currentTarget.className += " ws-grey";
+    }
+    
+    function atz_open() {
+      var x = document.getElementById("myAccordion");
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+        if (document.getElementById("navbtn_menu")) {
+          document.getElementById("navbtn_menu").getElementsByTagName("i")[0].style.display = "none";
+          document.getElementById("navbtn_menu").getElementsByTagName("i")[1].style.display = "inline";
+        }
+      } else {
+        x.style.display = 'none';
+        if (document.getElementById("navbtn_menu")) {
+          document.getElementById("navbtn_menu").getElementsByTagName("i")[0].style.display = "inline";
+          document.getElementById("navbtn_menu").getElementsByTagName("i")[1].style.display = "none";
+        }
+      }
+    }
+    function atz_close() {
+      document.getElementById("myAccordion").style.display = "none";
+    }
+    function open_xs_menu(x) {
+      if (document.getElementById("sectionxs_" + x).innerHTML == "") {
+        document.getElementById("sectionxs_" + x).innerHTML = document.getElementById("nav_" + x).innerHTML;
+      } else {
+        document.getElementById("sectionxs_" + x).innerHTML = "";
+      }
+    }
+    function atz_open_nav(x) {
+      if (document.getElementById("nav_" + x).style.display == "block") {
+        atz_close_nav(x);
+      } else {
+        atz_close_nav("tutorials");
+        atz_close_nav("references");
+        atz_close_nav("exercises");
+        document.getElementById("nav_" + x).style.display = "block";
+        if (document.getElementById("navbtn_" + x)) {
+          document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "none";
+          document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "inline";
+          document.getElementById("navbtn_" + x).classList.add("mystyle");
+        } 
+        if (x == "search") {
+          if (document.getElementById("gsc-i-id1")) {document.getElementById("gsc-i-id1").focus(); }
+        }
+      }
+    }
+    function atz_close_all_nav() {
+      atz_close_nav("tutorials");
+      atz_close_nav("references");
+      atz_close_nav("exercises");
+      atz_close();
+    }
+    function atz_close_nav(x) {
+      document.getElementById("nav_" + x).style.display = "none";
+      if (document.getElementById("navbtn_" + x)) {
+        document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "inline";
+        document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "none";
+        document.getElementById("navbtn_" + x).classList.remove("mystyle");
+      }
+    }
+    
+    </script>
+
+
+
+  
+<a class="atz-bar-item atz-button atz-hide-small barex bar-item-hover atz-padding-24" href="javascript:void(0)" onclick="atz_open_nav('tutorials')" id="navbtn_tutorials" title="Tutorials" style="width:115px">Tutorials    <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
+<a class="atz-bar-item atz-button atz-hide-small barex bar-item-hover atz-padding-24" href="javascript:void(0)" onclick="atz_open_nav('references')" id="navbtn_references" title="References" style="width:132px">References <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
+<a class="atz-bar-item atz-button atz-hide-small barex bar-item-hover atz-padding-24" href="javascript:void(0)" onclick="atz_open_nav('exercises')" id="navbtn_exercises" title="Exercises" style="width:118px">Exercises <i class='fa fa-caret-down' ></i><i class='fa fa-caret-up' style="display:none"></i></a>
+
+  
+ 
+
+   
+</div>
+
+
+<div class='atz-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto; ">
+    <div class="atz-bar atz-left" style="width:100%;overflow:hidden;height:44px;">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu atz-hide-large atz-left atz-bar-item atz-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../../welcome' class='topnav-icons fa fa-home atz-left atz-bar-item atz-button' title='Home'></a>
+      <a class="atz-bar-item atz-button" href='../html_css/default.html' title='HTML and CSS Tutorial' style="padding-left:18px!important;padding-right:18px!important;">HTML and CSS</a>
+      <a class="atz-bar-item atz-button" href='../computers/default.html' title='Computers Tutorial'>Computers</a>
+      <a class="atz-bar-item atz-button" href='../windows/default.html' title='Ms-Windows OS Tutorial'>Windows OS</a>
+      <a class="atz-bar-item atz-button" href='../cisco_networking/default.html' title='Cisco Tutorial'>Cisco Networking</a>
+      <a class="atz-bar-item atz-button" href='../ms_office/default.html' title='Ms-Office Tutorial'>Ms-Office</a>
+      <a class="atz-bar-item atz-button" href='../ms_sqlserver/default.html' title='Ms-SQL Tutorial'>Ms-SQL Server</a>
+      <a class="atz-bar-item atz-button" href='../english_language/default.html' title='English Language Tutorial'>English Language</a>
+     
+    </div>
+  
+<nav id="nav_tutorials" class="atz-hide-small" style="position:absolute;padding-bottom:60px;">
+ <div class="atz-content" style="max-width:1100px;font-size:18px">
+ <span onclick="atz_close_nav('tutorials')" class="atz-button atz-xxxlarge atz-display-topright atz-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
+ <div class="atz-row-padding atz-bar-block">
+  <div class="atz-container" style="padding-left:13px">
+   <h2 style="color:#FFF4A3;"><b>Tutorials</b></h2>
+  </div>
+  <div class="atz-col l3 m6">
+   <h3 class="atz-margin-top">HTML and CSS</h3>
+   <a class="atz-bar-item atz-button" href="../html_css/html.html">Learn HTML</a>
+   <a class="atz-bar-item atz-button" href="../html_css/css.html">Learn CSS</a>
+   
+   
+   <h3 class="atz-margin-top">Computers</h3>
+   <a class="atz-bar-item atz-button" href="../computers/introduction.html">Introduction</a>
+   <a class="atz-bar-item atz-button" href="../computers/hardware.html">Hardwares</a>
+   <a class="atz-bar-item atz-button" href="../computers/software.html">Softwares</a> 
+   <a class="atz-bar-item atz-button" href="../computers/number_system.html">Number System</a>       
+   
+
+
+   <div class="atz-hide-large atz-hide-small">
+  </div>
+  </div>
+  <div class="atz-col l3 m6">
+   <h3 class="atz-margin-top">Cisco Networking</h3>
+   <a class="atz-bar-item atz-button" href="../cisco_networking/introduction.html">Introduction</a>
+   <a class="atz-bar-item atz-button" href="../cisco_networking/network_design.html">Network Design</a>
+   <a class="atz-bar-item atz-button" href="../cisco_networking/network_configuration.html">Network Configuration</a>
+
+
+   <h3 class="atz-margin-top">Ms-Office Apps</h3>
+   <a class="atz-bar-item atz-button" href="../ms_office/ms_access.html">Ms-Access</a>
+   <a class="atz-bar-item atz-button" href="../ms_office/ms_excel.html">Ms-Excel</a>
+   <a class="atz-bar-item atz-button" href="../ms_office/ms_word.html">Ms-Word</a>
+   <a class="atz-bar-item atz-button" href="../ms_office/ms_powerpoint.html">Ms-PowerPoint</a>
+
+  </div> 
+ <div class="atz-col l3 m6">
+   <h3 class="atz-margin-top">Ms-SQL Server</h3>
+   <a class="atz-bar-item atz-button" href="../ms_sqlserver/sql_introduction.html">Introduction</a>
+   <a class="atz-bar-item atz-button" href="../ms_sqlserver/sql_installation.html">SQL Server Installation</a>
+   <a class="atz-bar-item atz-button" href="../ms_sqlserver/sql_configuration.html">SQL Server Configuration</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/tsql.html'>T-SQL</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/maintenance_plan.html'>Maintenance Plan</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/sql_agent.html'>SQL Agent</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/backup_restore.html'>Backup & Restore</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/high_availability_desaster_recovery.html'>HA and DR</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/powershell.html'>PowerShell</a>
+
+  
+  </div>
+  <div class="atz-col l3 m6">
+
+    <h3 class="atz-margin-top">Windows OS</h3>
+    <a class="atz-bar-item atz-button" href="../windows/introduction.html">Introduction</a>
+    <a class="atz-bar-item atz-button" href='../windows/how_it_works.html'>How It Works</a>
+    <a class="atz-bar-item atz-button" href="../windows/other_types_of_os.html">Other Types of OS</a>
+
+    <h3 class="atz-margin-top">English Language</h3>
+    <a class="atz-bar-item atz-button" href="../english_language/sentence_structure.html">Sentence Structure</a>
+    <a class="atz-bar-item atz-button" href="../english_language/grammar.html">Grammar</a>
+    <a class="atz-bar-item atz-button" href="../english_language/reading.html">Reading</a>
+    <a class="atz-bar-item atz-button" href="../english_language/writting.html">Writting</a>
+    <a class="atz-bar-item atz-button" href="../english_language/listening.html">Listening</a>
+    <a class="atz-bar-item atz-button" href='../english_language/speaking.html'>Speaking</a>
+  </div>
+ </div>
+ </div>
+ <br class="hidesm">
+</nav>
+
+
+<nav id="nav_references" class="atz-hide-small navex" style="position:absolute;background-color:#282A35;color:white;padding-bottom:60px;">
+  <div class="atz-content" style="max-width:1100px;font-size:18px">
+  <span onclick="atz_close_nav('references')" class="atz-button atz-xxxlarge atz-display-topright atz-hover-white ws-hide-860" style="padding-right:30px;padding-left:30px;">&times;</span><br>
+  <div class="atz-row-padding atz-bar-block">
+  <div class="atz-container" style="padding-left:13px">
+    <h2 style="color:#FFF4A3;"><b>References</b></h2>
+   </div>
+ 
+   <div class="atz-col l3 m6">
+     <h3 class="atz-margin-top">Computers</h3>
+     <a class="atz-bar-item atz-button" href='../computers/computers_references.html'>Computers Reference</a>
+     
+     <h3 class="atz-margin-top">Cisco Networking</h3>
+     <a class="atz-bar-item atz-button" href='../cisco_networking/cisco_networking_references.html'>Cisco Networking Reference</a>
+   </div>
+ 
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top">Ms-Office</h3>
+    <a class="atz-bar-item atz-button" href='../ms_office/ms_office_references.html'>Ms-Office Reference</a>
+    
+    <h3 class="atz-margin-top">Ms-SQL Server</h3>
+    <a class="atz-bar-item atz-button" href='../ms_sqlserver/ms_sqlserver_references.html'>Ms-SQL Server Reference</a>
+   </div>
+   
+   <div class="atz-col l3 m6">
+     <h3 class="atz-margin-top">HTML and CSS</h3>
+    <a class="atz-bar-item atz-button" href='../html_css/html_css_references.html'>HTML and CSS Reference</a>
+ 
+     <h3 class="atz-margin-top">English Language</h3>
+     <a class="atz-bar-item atz-button" href='../english_language/english_language_references.html'>English Language References</a>
+    </div>
+ 
+   <div class="atz-col l3 m6">
+       
+   </div>
+   
+  </div>
+  <br class="hidesm">
+  </div>
+ </nav>
+ 
+ <nav id="nav_exercises" class="atz-hide-small" style="position:absolute;padding-bottom:60px;">
+  <div class="atz-content" style="max-width:1100px;font-size:18px">
+  <span onclick="atz_close_nav('exercises')" class="atz-button atz-xxxlarge atz-display-topright atz-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
+  <div class="atz-row-padding atz-bar-block">
+  <div class="atz-container" style="padding-left:13px">
+    <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
+   </div>
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top"><a class="ws-btn ws-yellow atz-hover-text-white" style="width:155px;font-size:21px" href="index.html">Exercises</a></h3>
+    <a class="atz-bar-item atz-button" href="../html_css/html_css_exercises.html">HTML and CSS</a>
+    <a class="atz-bar-item atz-button" href="../computers/computers_exercises.html">Computers</a>
+    <a class="atz-bar-item atz-button" href="../windows/ms_windows_exercises.html">Windows OS</a>
+    <a class="atz-bar-item atz-button" href="../cisco_networking/cisco_networking_exercises.html">Cisco Networking</a>
+    <a class="atz-bar-item atz-button" href="../ms_office/ms_office_exercises.html">Ms-Office</a>
+    <a class="atz-bar-item atz-button" href="../ms_sqlserver/ms_sqlserver_exercises.html">Ms-SQL Server</a>
+    <a class="atz-bar-item atz-button" href="../english_language/english_language_exercises.html">English Language</a>
+   
+   </div>
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top"><a class="ws-btn ws-yellow atz-hover-text-white" style="width:135px;font-size:21px" href="index.html">Quizzes</a></h3>
+    <a class="atz-bar-item atz-button" href="../html_css/html_css_quiz.html" target="_top">HTML and CSS</a>
+    <a class="atz-bar-item atz-button" href="../computers/computers_quiz.html" target="_top">Computers</a>
+    <a class="atz-bar-item atz-button" href="../windows/ms_windows_quiz.html" target="_top">Windows OS</a>
+    <a class="atz-bar-item atz-button" href="../cisco_networking/cisco_networking_quiz.html" target="_top">Cisco Networking</a>
+    <a class="atz-bar-item atz-button" href="../ms_office/ms_office_quiz.html" target="_top">Ms-Office</a>
+    <a class="atz-bar-item atz-button" href="../ms_sqlserver/ms_sqlserver_quiz.html" target="_top">Ms-SQL Server</a>
+    <a class="atz-bar-item atz-button" href="../english_language/english_language_quiz.html" target="_top">English Language</a>
+ 
+   </div>
+   <div class="atz-col l3 m6">
+ 
+   </div>
+  </div>
+  <br class="hidesm">
+  </div>
+
+ </nav>
+
+
+ <nav id="nav_exercises" class="atz-hide-small" style="position:absolute;padding-bottom:60px;">
+  <div class="atz-content" style="max-width:1100px;font-size:18px">
+  <span onclick="atz_close_nav('exercises')" class="atz-button atz-xxxlarge atz-display-topright atz-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
+  <div class="atz-row-padding atz-bar-block">
+  <div class="atz-container" style="padding-left:13px">
+    <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
+   </div>
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top"><a class="ws-btn ws-yellow atz-hover-text-white" style="width:155px;font-size:21px" href="../exercises/index.html">Exercises</a></h3>
+    <a class="atz-bar-item atz-button" href="../html_css/html_css_exercises.html">HTML and CSS</a>
+    <a class="atz-bar-item atz-button" href="../computers/computers_exercises.html">Computers</a>
+    <a class="atz-bar-item atz-button" href="../ms_windows/ms_windows_exercises.html">Windows OS</a>
+    <a class="atz-bar-item atz-button" href="../cisco_networking/cisco_networking_exercises.html">Cisco Networking</a>
+    <a class="atz-bar-item atz-button" href="../ms_office/ms_office_exercises.html">Ms-Office</a>
+    <a class="atz-bar-item atz-button" href="../ms_sqlserver/ms_sqlserver_exercises.html">Ms-SQL Server</a>
+    <a class="atz-bar-item atz-button" href="../english_language/english_language_exercises.html">English Language</a>
+    
+   </div>
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top"><a class="ws-btn ws-yellow atz-hover-text-white" style="width:135px;font-size:21px" href="quiztest/default.html">Quizzes</a></h3>
+    <a class="atz-bar-item atz-button" href="../html_css/html_css_quiz.html" target="_top">HTML and CSS</a>
+    <a class="atz-bar-item atz-button" href="../computers/computers_quiz.html" target="_top">Computers</a>
+    <a class="atz-bar-item atz-button" href="../ms_windows/ms_windows_quiz.html" target="_top">Windows OS</a>
+    <a class="atz-bar-item atz-button" href="../cisco_networking/cisco_networking_quiz.html" target="_top">Cisco Networking</a>
+    <a class="atz-bar-item atz-button" href="../ms_office/ms_office_quiz.html" target="_top">Ms-Office</a>
+    <a class="atz-bar-item atz-button" href="../ms_sqlserver/ms_sqlserver_quiz.html" target="_top">Ms-SQL Server</a>
+    <a class="atz-bar-item atz-button" href="../english_language/english_language_quiz.html" target="_top">English Language</a>
+    
+   </div>
+   <div class="atz-col l3 m6">
+    
+   </div>
+  </div>
+  <br class="hidesm">
+  </div>
+ </nav>
+
+  </div>
+</div>
+
+<div id='myAccordion' class="atz-card-2 atz-center atz-hide-large atz-hide-medium ws-grey" style="width:100%;position:absolute;display:none;">
+  <a href="javascript:void(0)" onclick="atz_close()" class="atz-button atz-xxlarge atz-right">&times;</a><br>
+  <div class="atz-container atz-padding-32">
+    <a class="atz-button atz-block" style="font-size:22px;" onclick="open_xs_menu('tutorials');" href="javascript:void(0);">Tutorials <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_tutorials" class="atz-left-align atz-show" style="background-color:#282A35;color:white;"></div>
+    <a class="atz-button atz-block" style="font-size:22px;" onclick="open_xs_menu('references')" href="javascript:void(0);">References <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_references" class="atz-left-align atz-show" style="background-color:#282A35;color:white;"></div>
+    <a class="atz-button atz-block" style="font-size:22px;" onclick="open_xs_menu('exercises')" href="javascript:void(0);">Exercises <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_exercises" class="atz-left-align atz-show" style="background-color:#282A35;color:white;"></div>
+
+  </div>
+</div>
+
+
+<div class='atz-sidebar atz-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div id='leftmenuinnerinner'>
+<!--  <a href='javascript:void(0)' onclick='close_menu()' class='atz-button atz-hide-large atz-large atz-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+<h2 class="left"><span class="left_h2">MS-SQL </span>Server</h2>
+<a target="_top" href="sql_introduction.html">Introduction</a>
+<a target="_top" href="sql_installation.html">SQL Server Installation</a>
+<a target="_top" href="sql_configuration.html">SQL Server Configuration</a>
+<a target="_top" href="tsql.html">T-SQL</a>
+<a target="_top" href="maintenance_plan.html">Maintenance Plan</a>
+<a target="_top" href="sql_agent.html">SQL Server Agent</a>
+<a target="_top" href="backup_restore.html">Backup and Restore</a>
+<a target="_top" href="high_availability_desaster_recovery.html">HA and DR</a>
+<a target="_top" href="powershell.html">PowerShell</a>
+
+
+    </div>
+  </div>
+</div>
+<div class='atz-main atz-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='atz-row atz-white'>
+    <div class='atz-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+
+        
+        <div id="adngin-main_leaderboard-0">
+          
+          <h2 align="left" bgcolor="#04aa6b"><font color="blue">Zeal For Wisdom</font></h2>
+         
+        </div>
+        <hr>
+
+        <!-- adspace leaderboard -->
+
+      </div>
+<h1>High Availability and Disaster Recovery<span class="color_h1"></span></h1>
+
+<div class="atz-panel atz-info intro">
+	
+			<p>
+        <h3>High Availability and Disaster Recovery</h3>
+        <ul>
+          <li>The main point of a high-availability strategy is to keep the critical data as available as possible</li>
+          <li>The different high availability solutions provide ways to keep a database system online even at the time of hardware failure or other unforeseen incidents</li>
+          <li>Disaster recovery efforts are all about restoring systems and data to a previous acceptable state in the event of partial or complete failure of computers due to natural or technical causes</li>
+        </ul>
+			 <h3>Recovery Point Objective(RPO)</h3>
+       <ul>
+        <li>The RPO is the amount of data one can lose, measured by time</li>
+        <li> It is likely to be different from system to system and application to application</li>
+        <li> For instance, a critical system may have an RPO measured in minutes while a non-critical one may have it measured in days</li>
+       </ul>
+      <h3>Recovery Time Objective (RTO)</h3>
+      <ul>
+        <li>How much time is needed to bring systems online incase a disaster happened</li>
+        <li>DBAs need to work closely with other members of the IT team to establish the RPO and RTO</li>
+      </ul>
+      <h3>High availability and Disaster recovery Solutions</h3>
+      <ol>
+        <li>Mirroring </li>
+        <li>Log Shipping </li>
+        <li>Replication </li>
+        <li>AlwaysOn availability </li>
+      </ol>
+       <h3>Mirroring</h3>
+       <p align="center">
+        <img src="../images/mirroring.png" width="450px">
+      </p>
+       <ul>
+        <li>SQL Server database mirroring is a disaster recovery and high availability technique that involves two SQL Server instances on the same or different machines. One SQL Server instance acts as a primary instance called the principal, while the other is a mirrored instance called the mirror. 
+          In special cases, there can be a third SQL Server instance that acts as a witness
+         <ul>
+          <li>Principal Instance - Take a full backup and a log backup as well</li>
+          <li>Copy the full/log backups from Principal Instance to Mirror instance</li>
+          <li>Mirror Instance - Restore with NORECOVERY option the full backup</li>
+          <li>Mirror Instance – Apply the log backup</li>
+          <li>Principal Instance - Start synchronization</li>
+         </ul>
+         <b>Witness:</b> The role of the witness is to verify whether a given partner server is up and functioning. If the mirror 	server loses its connection to the principal server but the witness is still connected to the principal server, 	the mirror server does not initiate a failover
+        </li>
+        <li>From the Principal server, right click the database and choose "Tasks" | "Mirror" or choose "Properties" | "Mirroring"</li>
+        <li>Click the "Configure Security" button and click "Next >" if the Configure Database Mirroring Security Wizard intro screen appears. The next screen should be the Include Witness Server screen </li>
+        <li>The next screen will give you options to configure the Principal Server Instance </li>
+        <li>The next screen will give you options to configure the Mirror Server Instance</li>
+        <li>To connect to the Mirror server instance we will need to click the "Connect..." button then select the mirror server and provide the correct credentials</li>
+        <li>Once connected, we also notice our endpoint name is Mirroring and we are listening on port 5022. Click "Next >" and you'll see the Service Accounts screen</li>
+        <p>
+        When using Windows Authentication, if the server instances use different accounts, specify the service accounts for SQL Server. These service accounts must all be domain accounts (in the same or trusted domains).
+        If all the server instances use the same domain account or use certificate-based authentication, leave the fields blank.
+        Since my service accounts are using the same domain account, I'll leave this blank.
+        Click "Finish" and you'll see a Complete the Wizard screen that summarizes what we just configured. Click "Finish" one more time
+       </p>
+       <li>If you see the big green check mark that means Database Mirroring has been configured correctly. However, just because it is configured correctly doesn't mean that database mirroring is going to start...
+        Next screen that pops up should be the Start/Do Not Start Mirroring screen</li>
+        
+      </ul>
+      <h3>Log Shipping</h3>
+      <ul>
+        <li>Log Shipping is a basic level SQL Server high-availability technology that is part of SQL Server. It is an automated backup/restore process that allows you to create another copy of your database for failover</li>
+        <li>Log shipping involves copying a database backup and subsequent transaction log backups from the primary (source) server and restoring the database and transaction log backups on one or more secondary (Stand By / Destination) servers. 
+          The Target Database is in a standby or no-recovery mode on the secondary server(s) which allows subsequent transaction logs to be backed up on the primary and shipped (or copied) to the secondary servers and then applied (restored) there</li>
+          <li><b>Permissions</b><br>
+             To setup a log-shipping you must have sysadmin rights on the server</li>
+          <li><b>Minimum Requirements</b><br>
+            SQL Server 2005 or later
+	Standard, Workgroup or Enterprise editions must be installed on all server instances involved in log 	shipping.
+	The servers involved in log shipping should have the same case sensitivity settings.
+	The database must use the full recovery or bulk-logged recovery model
+	A shared folder for copying T-Log backup files
+	SQL Server Agent Service must be configured properly
+	In addition, you should use the same version of SQL Server on both ends. It is possible to Log Ship from 	SQL 2005 to SQL 2008, but you can not do it the opposite way. 
+  Also, since Log Shipping will be primarly used for failover if you have the same versions on each end and there is a need to failover you at least 	know you are running the same version of SQL Server
+          </li>
+          <li>On the primary server, right click on the database in SSMS and select Properties. Then select the Transaction Log Shipping Page. Check the "Enable this as primary database in a log shipping configuration" check box</li>
+          <li>The next step is to configure and schedule a transaction log backup. Click on Backup Settings... to do this</li>
+          <li>If you are creating backups on a network share enter the network path or for the local machine you can specify the local folder path</li>
+          <li>In this step we will configure the secondary instance and database. Click on the Add... button to configure the Secondary Server instance and database. You can add multiple servers if you want to setup one to many server log-shipping</li>
+          <li>When you click the Add... button it will take you to the below screen where you have to configure the Secondary Server and database. Click on the Connect... button to connect to the secondary server. Once you connect to the secondary server you can access the three tabs as shown below</li>
+          <li>In this step you can specify how to create the data on the secondary server. You have three options: create a backup and restore it, use an existing backup and restore or do nothing because you have manually restored the database and have put it into the correct state to receive additional backups</li>
+          <li>In this step you can specify how to create the data on the secondary server. You have three options: create a backup and restore it, use an existing backup and restore or do nothing because you have manually restored the database and have put it into the correct state to receive additional backups</li>
+          <li>Here you have to specify the database restoring state information and restore schedule. This will create the restore job on the secondary server</li>
+          <li>In this step we will configure Log Shipping Monitoring which will notify us in case of any failure. Please note Log Shipping monitoring configuration is optional</li>
+          <li>Click on Settings... button which will take you to the "Log Shipping Monitor Settings" screen. Click on Connect ... button to setup a monitor server. Monitoring can be done from the source server, target server or a separate SQL Server instance. We can configure alerts on source / destination server if respective jobs fail. Lastly we can also configure how long job history records are retained in the MSDB database. Please note that you cannot add a monitor instance once log shipping is configured</li>
+          <li>Click on the OK button to finish the Log Shipping configuration and it will show you the below screen</li>
+      </ul>
+       <h3>Replication</h3>
+       <ul>
+        <li>Replication is a set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency. Using replication, you can distribute data to different locations and to remote or mobile users over local and wide area networks, dial-up connections, wireless connections, and the Internet</li>
+        <li>Microsoft SQL Server supports three types of database replication. This article provides a brief introduction to each of these models, while future articles will explore them in further detail. They are:
+          <ul>
+            <li><b>Snapshot replication:</b> The publisher simply takes a snapshot of the entire replicated database and shares it with the subscribers</li>
+             <li><b>Transactional replication:</b> offers a more flexible solution for databases that change on a regular basis. With transactional replication, the replication agent monitors the publisher for changes to the database and transmits those changes to the subscribers. This transmission can take place immediately or on a periodic basis</li>
+             <li><b>Merge replication:</b> allows the publisher and subscriber to independently make changes to the database. Both entities can work without an active network connection. When they are reconnected, the merge replication agent checks for changes on both sets of data and modifies each database accordingly. If changes conflict, the agent uses a predefined conflict resolution algorithm to determine the appropriate data. Merge replication is commonly used by laptop users and others who cannot be continually connected to the publisher</li>
+            </ul>
+          </li>
+          <li><b>Publisher:</b> It is a source database where replication starts. It makes data available for replication.
+            Publishers define what they publish through a publication</li>
+            <li><b>Article:</b> Articles are the actual database objects included in replication like tables, views, indexes, etc.
+              An article can be filtered when sent to the subscriber</li>
+              <li><b>Publication:</b> A group of articles is called publication.
+                An article can’t be distributed individually. Hence publication is required</li>
+                <li><b>Distributor:</b> It is intermediary between publisher and subscriber.
+                  It receives published transactions or snapshots and then stores and forwards these publications 			to the subscriber. It has 6 system databases including distribution.
+            </li>
+            <li><b>Subscriber:</b> It is the destination database where replication ends.
+              It can subscribe to multiple publications from multiple publishers.
+              It can send data back to publisher or publish data to other subscribers</li>
+              <li><b>Subscription:</b> It is a request by a subscriber to receive a publication.
+                We have two types of subscriptions - push and pull</li>
+                <li><b>Push Subscriptions:</b> With this subscription, the publisher is responsible for updating all the changes to the Subscriber without the subscriber asking those changes.
+                  Push subscriptions are created at the Publisher server</li>
+                  <li><b>Pull Subscriptions:</b> With this subscription the subscriber initiates the replication instead of the publisher.
+                    The subscriptions are created at the Subscriber server</li>
+            <li><b>Snapshot Agent:</b> It is an executable file that prepares snapshot files containing schema and data of published tables and db objects. It stores the files in the snapshot folder, and records synchronization jobs in the distribution database</li>
+            <li><b>Distribution Agent:</b> It is used with snapshot and transactional replication. It applies the initial snapshot to the Subscriber and moves transactions held in the Distribution db to Subscribers. It runs at either the Distributor for push subscriptions or at the Subscriber for pull subscriptions</li>
+            <li><b>Log Reader Agent:</b> It is used with transactional replication, which moves transactions marked for replication from the transaction log on the publisher to the distribution db. Each db has its own Log Reader Agent that runs on the Distributor and connects to the Publisher</li>
+            <li><b>Merge Agent:</b> It is used with merge replication. It applies the initial snapshot to the Subscriber and moves incremental data changes that occur. Each merge subscription has its own Merge Agent that connects to both the Publisher and the Subscriber and updates both. It captures changes using triggers</li>
+            <li><b>Queue Reader Agent:</b> It is used with transactional replication with the queued updating option. It runs at the Distributor and moves changes made at the Subscriber back to the Publisher. Unlike Distribution Agent and Merge Agent, only one instance of the Queue Reader Agent exists to service all Publishers and publications for a given distribution db</li>
+       </ul>
+       <h3>Types Of Replication</h3>
+       <ul>
+        <li>Snapshot Replication </li>
+        <li>Transactional Replication</li>
+        <li>Merge Replication</li>
+       </ul>
+       <p align="center">
+        <img src="../images/replication.png" width="450px">
+      </p>
+      <h4>Configuring Replication </h4>
+      <ul>
+        <li>Configuring distributor </li>
+        <li>Configuring publisher</li>
+        <li>Creating publication of required type</li>
+        <li>Creating subscription(s) </li>
+      </ul>
+      Take three instances, Go to second instance -> Right click on Replication -> Configure Distribution…<br>
+      Next -> Select ‘SERVER2’ will act as its own distributor;<br>
+      Uncheck the check box present at Server2 -> Add<br>
+      Select instance Server1<br>
+      Go to distributor -> Databases -> Find the new database “Distribution”<br>
+      Go to Security -> Logins -> Find a new login “Distributor_admin”<br>
+      Go to Server Objects -> Linked servers -> Find new linked server “repl_distributor”<br>
+      Right Click on Replication -> Select distributor Properties<br>
+      Transactions stored in distribution database are removed after 72 hrs and agents history is removed after 48 hrs.
+      To view snapshot folder path -> Click on publishers -> click on browse button (…) present to right side of publisher name
+      <br>
+      Go to SQL Server Agent -> Jobs -> Find 6 new jobs are created automatically<br>
+      <b>Creating Snapshot Publication</b> Go to publisher (Server1) -> Replication -> Right Click on Local Publications -> New publication
+      <i>Next</i> Select second option -> Click on Add -> Select Distributor instance (Server2)<br>
+      <i>Connect ? Next</i> Enter password of Distributor_admin login which we have mentioned while configuring publisher.<br>
+      <i>Next</i>Select required database..<br>
+      <i>Next</i> Select “Snapshot Publication” -> <br>
+      <i>Next</i>Select required tables -> <br>
+      <i>Next</i> Click on security settings Select as follows
+      Go to publisher -> Replication -> Local publications -> Find new publication is created<br>
+      Go to distributor -> SQL Server Agent -> Jobs -> Find snapshot agent job was created<br>
+
+      <b>Creating Subscription</b><br>
+      Go to publisher -> Replication -> Local Publications -> Right Click on SSISDBSP -> New Subscription<br>
+      <i>Next</i> Select the publication name: SSISDBSP<br>
+      <i>Next</i> Select Push subscriptions<br>
+      Add Subscriber -> Select third instance (Server1\test) -> Connect<br>
+      <i>Next</i> Under Subscription Database if there is no database exists with same name -> Select New database -> Enter Database Name -> OK -> 
+      <i>Next</i>Click on browse button (…) under distribution agent security page.
+      Select “Run under Agent Service Account” and “By impersonating the process account” options as both distributor and subscriber’s service accounts are same. If the service account of subscriber is different, then create a login in subscriber with sysadmin privileges then mention that login details
+      <br>
+      <i>Next</i>Under Agent Schedule -> Select “Run Continuously” Under Initialize when select -> Immediately
+        <i>Next -> Next -></i> Finish
+
+        <p>
+          <h4>Verifying Replication</h4>
+              Go to publisher perform some changes in any table present in publication <br>
+              Go to distributor run Snapshot Agent Job<br>
+              Go to subscriber observe the changes in the respective table<br>
+        </p>
+      </p>
+      <p>
+        <h3>AlwaysOn</h3>
+        <h5>Prerequisites</h5>
+        <ol>
+          <li>Windows Server Failover Cluster (WSFC)</li>
+          <li>SQL Server 2012 Enterprise Edition</li>
+          <li>Same SQL Server collation for all replicas</li>
+          <li>Two to Five SQL Server Instances acting as replicas</li>
+        </ol>
+        Windows Server Failover Cluster (WSFC): Open the Server Manager console and select Add roles and Features. This will launch the Add Roles Features Wizard. 
+        Click Next until you reach the Select Features dialog Box. Select the Failover Clustering checkbox. When prompted with the Add features that are required for Failover Clustering dialog box, click Add Features. Click Next. Click Install to install the Failover Clustering feature.
+      <h4>Windows Failover Clustering Configuration for SQL Server 2012 AlwaysOn Availability Groups</h4>
+      <ul>
+        <li>Launch Failover Cluster Manager from within the Server Manager console</li>
+        <li>Within Failover Cluster Manager, click the Create Cluster link and after that Validate Cluster </li>
+        <li>Validate a Configuration Wizard dialog box, click Next</li>
+        <li>In the Select Servers or a Cluster dialog box, add the server hostnames of the SQL Server instances that you want to configure as replicas in your Availability Group. Click Next</li>
+      </ul>
+      <h4>Windows Failover Clustering Configuration for SQL Server 2012 AlwaysOn Availability Groups </h4>
+      <ul>
+        <li>In the Testing Options dialog box, make sure that the option Run all tests (recommended) is selected. Click Next</li>
+        <li>In the Confirmation dialog box, click Next</li>
+        <li>In the Summary dialog box, click Finish to create the Windows Failover Cluster</li>
+        <li>In the Access Point for Administering the Cluster dialog box, enter the virtual server name and virtual IP address of your Windows Server Failover Cluster</li>
+      </ul>
+      In the Confirmation dialog box, click Next. This will create the Windows Failover Cluster using the servers as nodes of the cluster, add DNS and Active Directory entries for the cluster hostname.
+      In the Summary dialog box, verify that the configuration is successful. 
+    <h4>Windows Failover Clustering Configuration for SQL Server 2012 AlwaysOn Availability Groups</h4>
+    <ul>
+      <li>To configure the cluster quorum configuration to use a file share, right-click on the cluster name, select More Actions and click Configure Cluster Quorum Settings… We will be configuring a file share witness for our cluster quorum setting. By default, the wizard will configure the cluster to use Node Majority</li>
+      <li>Click Next</li>
+      <li>In the Select Quorum Configuration page, select the Add or change the quorum witness option. Click Next</li>
+      <li>In the Select Quorum Witness page, select the Configure a file share witness (recommended for special configuration) option. Click Next</li>
+      <li>In the Configure File Share Witness page, type path of the file share that you want to use in the File Share Path: text box. Click Next</li>
+      <li>In the Confirmation page, click Next</li>
+      <li>In the Summary page, click Finish</li>
+    </ul>
+    <h3>Enable SQL Server 2012 AlwaysOn Availability Groups Feature</h3>
+    Once the Windows Server Failover Cluster has been created, we can now proceed with enabling the AlwaysOn Availability Groups feature in SQL Server 2012.  This needs to be done on all of the SQL Server instances that you will configure as replicas in your Availability Group. To enable the SQL Server 2012 AlwaysOn Availability Groups feature,
+    In the Properties dialog box, select the AlwaysOn High Availability tab. Check the Enable AlwaysOn Availability Groups check box. This will prompt you to restart the SQL Server service. Click OK.<br>
+    Restart the SQL Server service.
+    <h4>Create and Configure SQL Server 2012 AlwaysOn Availability Groups</h4>
+    <ul>
+      <li>Open SQL Server Management Studio. Connect to the SQL Server instance   </li>
+      <li>In Object Exporer, expand the AlwaysOn High Availability folder. Right-click on the Availability Groups folder and select the New Availability Group Wizard… option. This will launch the New Availability Group Wizard</li>
+      <li>In the Introduction page, click Next</li>
+      <li>In the Specify Availability Group Name page, enter the name of the Availability Group in the Availability group name: field. Click Next</li>
+      <li>In the Select Databases page, select the checkbox beside the database that you want to include in your Availability Group. The databases have to be in Full recovery model prior to joining them in the Availability group. Click Next</li>
+    </ul>
+   <h4>Create and Configure SQL Server 2012 AlwaysOn Availability Groups</h4>
+   <ul>
+    <li>In the Specify Replicas page, under the Replicas tab, click the Add Replicas button and connect to the other SQL Server instances that you joined as nodes in your Windows Server Failover Cluster. Configure the following options <br> 
+      Automatic Failover (Up to 2) :          Checked <br>
+      Synchronous Commit (Up to 3) :      Checked <br>
+      Readable Secondary:                      No <br>
+    </li>
+    <li>In the Endpoints tab, verify that the port number value is 5022</li>
+    <li>In the Listener tab, select the Create an availability group listener option. Enter the following details.
+      Listener DNS name: Name that you will use in your application connection string Port: 1433    </li>
+      <li>Click the Add… button to provide an IP address. In the Add IP Address dialog box, enter your preferred virtual IP address in the IPv4 Address field. Click OK. Click Next</li>
+      <li>In the Select Initial Data Synchronization page, select the Full option. Provide a shared folder that is accessible the replicas and that the SQL Server service account used by both replicas has Write permissions to</li>
+      <li>In the Validation page, verify that all validation checks return successful results. Click Next</li>
+      <li>In the Summary page, verify all configuration settings and click Finish. This will create and configure the AlwaysOn Availability Group and join the databases</li>
+      <li>In the Results page, verify that all tasks have been completed successfully</li>
+   </ul>
+      </p>
+      
+      
+
+				<a href="#"><b>Read More ...</b></a>
+        		
+
+</div>
+
+
+<hr>
+
+
+<style>
+#img_mylearning {
+  max-width:100%;
+}
+</style>
+
+
+<br>
+
+<style>  
+
+#atz_cert_badge {
+  position: absolute;
+  right: 5%;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: -20%;
+}
+
+#atz_cert_arrow {
+  position: absolute;
+  right: 220px;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: 0;
+  z-index: 1;
+}
+
+#getdiploma {
+  position: relative;
+  padding: 0 60px 50px 60px;
+  margin-bottom: 125px;
+  border-radius: 16px;
+ /* background-color: #282A35;*/
+  background-image: url(../images/showcase.jpg);
+  background-repeat: no-repeat;
+  
+  color: #FFC0C7;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#getdiploma h2 {
+  font-size:50px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma p {
+  font-size: 42px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma a {
+  border-radius: 50px;
+  margin-top: 50px;
+  font-size: 18px;
+  background-color: #04AA6D;
+  padding: 17px 55px
+}
+
+#getdiploma a:hover,
+#getdiploma a:active {
+  background-color: #059862 !important;
+}
+
+
+@media screen and (max-width: 1442px) {
+  #atz_cert_arrow {
+    right: 212px;
+    bottom: -15px;
+  }
+}
+
+
+@media screen and (max-width: 1202px) {
+  #atz_cert_arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #atz_cert_arrow {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  #atz_cert_arrow {
+    display: none;
+  }
+  #getdiploma h2 {
+    font-size: 44px;
+  }
+  #getdiploma p {
+    font-size: 30px;
+  }
+
+  #getdiploma a {
+    width: 100%;
+  }
+  #atz_cert_badge {
+    top: -16px;
+    right: -8px;
+    width: 100px;
+  }
+  #getdiploma  {
+    margin-bottom: 55px;
+  }
+}
+</style>
+
+<div class="atz-panel" id="getdiploma">
+
+  <h2>Zeal For Wisdom</h2>
+
+
+<p>Learn Today <span id="hey">For</span> <span id="coursetopic"></span> Better Tomorrow</p>
+  
+<script>
+var foldername;
+function getCourseFolder() {
+  var pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  foldername = foldername.toUpperCase();
+  if (foldername == "JS") foldername = "JavaScript";
+  if (foldername == "QUIZTEST" || foldername == "EXERCISES") {
+    document.getElementById("hey").innerText = "a";
+  }
+  if (foldername == "QUIZTEST" || foldername == "EXERCISES") foldername = "";
+  if (foldername == "CS") foldername = "C#";
+  if (foldername == "CYBERSECURITY") foldername = "Cyber Security";  
+  if (foldername == "CPP") foldername = "C++";
+  document.getElementById("coursetopic").innerText = foldername;
+}
+getCourseFolder();
+</script>
+
+<!--Aaron ================
+<a class="atz-btn atz-margin-bottom" href="https://shop.atzschools.com/collections/course-catalog" target="_blank">Get certified</a>
+
+<svg id="atz_cert_arrow" viewBox="0 0 170 143" fill="none" xmlns="http://www.atz.org/2000/svg">
+<path d="M9.7747 42.7064C9.7747 42.7064 19.5575 77.2951 44.4558 84.8113C62.0225 90.1142 81.0061 80.1196 77.791 68.3309C76.0904 62.0955 69.0574 62.4735 65.5106 65.8444C59.1003 71.9368 67.8591 89.7423 77.9205 96.1324C112.816 118.295 161.943 84.5867 161.943 84.5867" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M159.804 93.8429L162.704 84.4917L152.715 80.8293" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg id="atz_cert_badge" data-name="atz_cert_badge" xmlns="http://www.atz.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"/><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">2</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"/><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"/></svg>
+
+-->
+</div>
+
+
+
+<br>
+<br>
+
+<div class="atz-clear nextprev">
+<!--Aaron
+  
+<a class="atz-left atz-btn" href="../default.html">&#10094; Home</a>
+<a class="atz-right atz-btn" href="html_intro.html">Next &#10095;</a>
+  -->
+</div>
+
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+<div class="atz-col l2 m12" id="right">
+  <img src="../images/BGImage.jpg" width="150px">
+<div class="sidesection">
+    <h4>About me</h4>
+  <img src="../images/Aron.jpg"  width="130px" height="auto" alt="computers" loading="lazy">
+ <h6 align="left" color="cyan">More than ten years experience working in a variety of settings including higher education.</h6>
+
+ <hr>
+
+<h4>Lab Work</h4>
+<img src="../images/work.jpg"  width="150px" height="auto" alt="computers" loading="lazy">
+
+<hr>
+
+<h4>Contact us</h4>
+<form class="frm" action="https://formsubmit.co/aron.tesfie85@gmail.com" method="post">
+  
+  <p>Full Name:
+  <input class="txt" type="text" name="Name" placeholder="Your Name" required ></p> 
+  <p>Email:
+  <input class="txt" type="email" name="Email" placeholder="Your email" required></p>
+  <p>Comment:
+  <textarea class="txtarea" name="Message" placeholder="Type your comments" required></textarea></p>
+  <button class="atz-btn atz-margin-bottom" type="submit">Submit</button>
+</form>
+
+<hr>
+<!--Aaron
+<div id="skyscraper">
+  
+</div>
+-->   
+  
+</div>
+  
+<style>
+.ribbon-vid {
+  font-size:12px;
+  font-weight:bold;
+  padding: 6px 20px;
+  left:-20px;
+  top:-10px;
+  text-align: center;
+  color:black;
+  border-radius:25px;
+}
+</style>
+
+
+<div class="sidesection">
+<h4>Computers</h4>
+<img src="../images/computers.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+</div>
+
+<div class="sidesection">
+  <h4>Windows OS</h4>
+   <img src="../images/windows.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+
+<div class="sidesection">
+  <h4>Cisco Networking</h4>
+   <img src="../images/cisco.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+
+  <div class="sidesection">
+    <h4>Ms-Office</h4>
+     <img src="../images/office.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+    </div>
+
+    <div class="sidesection">
+      <h4>Ms-SQL</h4>
+       <img src="../images/sql.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+      </div>
+
+      <div class="sidesection">
+        <h4>English</h4>
+         <img src="../images/english.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+        </div>
+
+<div class="sidesection">
+  <h4>Visit us here</h4>
+  <div class="sharethis">
+    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new/" target="_blank" title="Facebook"><img src="../images/email.jfif" height="20px"></a>
+    
+    <a href="https://www.facebook.com/profile.php?id=100012691334408" target="_blank" title="Facebook"><img src="../images/facebook.png" height="20px"></a>
+    <a href="https://atz-zeal-for-wisdom.blogspot.com/" target="_blank" title="our page"><img src="../ari-icon.ico" height="20px"></a>
+    </div>
+</div>
+
+
+
+<style>
+#courses_get_started_btn {
+text-decoration:none !important;
+background-color:#04AA6D;
+width:100%;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+padding-top:10px;
+padding-bottom:10px;
+font-family: 'Source Sans Pro', sans-serif;
+}
+#courses_get_started_btn:hover {
+background-color:#059862!important;
+}
+</style>
+
+
+
+<div class="sidesection" id="moreAboutSubject">
+  <div class="sidesection">
+    <h4>Networking</h4>
+    <img src="../images/networking-gif.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+    </div>
+</div>
+
+<div class="sidesection" style="margin-top:20px;margin-bottom:20px;">
+  
+  <!--Aaron
+<a id="lowerfeatureshowcaselink" class="showcaseupgrade" href="../pro/index.html" target="_blank">
+<picture id="lowerfeatureshowcase">
+  <source id="lowerfeatureshowcase3001" srcset="/images/img_upgrade_300.png" media="(max-width: 990px)" style="border-radius: 5px;">
+  <source id="lowerfeatureshowcase120" srcset="/images/img_upgrade_120.png" media="(max-width: 1260px)" style="border-radius: 5px;">
+  <source id="lowerfeatureshowcase160" srcset="/images/img_upgrade_160.png" media="(max-width: 1700px)" style="border-radius: 5px;">
+  <img id="lowerfeatureshowcase300" src="https://www.atzschools.com/images/img_upgrade_300.png" alt="Upgrade" style="width:auto;border-radius: 5px;">
+</picture>
+</a>
+-->
+<div class="sidesection">
+  <h4>Star Topology</h4>
+  <img src="../images/network-gif2.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+
+
+<div class="sidesection">
+  <h4>Ring Topology</h4>
+  <img src="../images/network-gif3.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+
+
+<div class="sidesection">
+  <h4>Bus Topology</h4>
+  <img src="../images/network-gif4.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+</div>
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <div id="adngin-sidebar_sticky-0"></div>
+        <script>
+        function secondSnigel() {
+          if(window.adngin && window.adngin.adnginLoaderReady) {
+            if (Number(atz_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {         
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+              } else {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+              }
+            } else {
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+              }
+            }
+          } else {
+            window.addEventListener('adnginLoaderReady', function() {
+              if (Number(atz_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+                } else {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+                }
+              } else {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+                }
+              }
+            });
+          }
+        }
+      </script>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+uic_r_c()
+</script>
+
+</div>
+</div>
+
+<div id="footer" class="footer atz-container atz-white">
+
+  <hr>
+  
+  <div style="overflow:auto">
+    <div class="bottomad">
+     <div id="adngin-bottom_left-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+       <div id="adngin-bottom_right-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="atz-center atz-small atz-opacity">
+    <p class="atz-medium">
+      ATZ-Zeal For Wisdom is optimized for learning. Visit here for <a href="https://atz-zeal-for-wisdom.blogspot.com" class="atz-hover-text-green">Additional Materials</a><br> 
+      <a href="https://www.privacypolicygenerator.info/live.php?token=gG2W4zhr2x91eacKLHgM9BtM1g2xjEqS" class="atz-hover-text-green">cookie and privacy policy</a>.
+      <a href="#" class="atz-hover-text-green">Copyright </a> &copy; by Aron Zeru, 2024. All Rights Reserved.<br><br></p>
+     </div>
+  <div class="atz-center atz-small">
+  <a href="../../welcome"><img src="../images/ari-icon.ico"></a>
+  
+    </div>
+  <br><br>
+  </div>
+  
+  
+  </div>
+  
+  
+  
+  </body>
+  
+  </html>

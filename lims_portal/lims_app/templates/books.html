@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content%}
+
+<!--<h1>I am in readers page</h1>-->
+<div class="container-flex text-center justify-content-center align-items-center" style="padding-top: 10px; padding-bottom: 20px; margin-top: 10px; vertical-align: middle;">
+
+    <div class="row justify-content-center align-middle" style="margin-top: 10px; height: 60px;">
+
+        <div class="col-md-4 text-light" style="background-color: #4B088A;">
+            <h4 style="margin-top: 15px;">Add new book</h4>
+            
+        </div>
+        <div class="col-md-8">
+            <h4>Search books</h4>
+        </div>
+         
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+         <div class="container" style="overflow-y: auto; height: 600px; background:#CEECF5">
+            <form class="d-flex" action="/books/add" method="POST">
+                {% csrf_token %}
+                <table class="table" style="margin-top: 20px;">
+                    <tr>
+                        <td style="text-align: left; vertical-align: middle; padding-left: 15px;">Book Title:</td>
+                        <td><input type="text" class="form-control" name="book_title"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; vertical-align: middle; padding-left: 15px;">Author Name:</td>
+                        <td><input type="text" class="form-control" name="book_author"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; vertical-align: middle; padding-left: 15px;">ISBN No:</td>
+                        <td><input type="text" class="form-control" name="book_isbn"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; vertical-align: middle; padding-left: 15px;">Description:</td>
+                        <td><textarea class="form-control" name="description"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="btn btn-primary" type="submit">Save</button></td>
+                    </tr>
+                     
+                </table>
+            </form>
+            <ul style="text-align: left; vertical-align: middle; padding-left: 15px;"">
+                <li><small>A book should be added to the system only by authorized persons.</small></li>
+                <li><small>All information must be carefully added.</small></li>
+                <li><small>Rented or borrowed books must be indicated as not available.</small></li>
+            </ul>
+        </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="row">
+        <nav class="navbar bg-body-light">
+           <div class="container-fluid justify-content-center align-items-center">
+            <form class="d-flex" role="search" action="/books/search" method="POST">
+                {% csrf_token %}
+                <input class="form-control me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+              </form>
+           </div>
+        </nav>
+    </div>
+    <div class="form" style="margin: 20px;">
+        <p>{{ books|length }} books available</p>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+    <div class="container" style="overflow-y: auto; height: 400px;">
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <td>Book ID</td>
+                    <td>Book Title</td>
+                    <td>Author Name</td>
+                    <td>ISBN No</td>
+                    <td>Description</td>
+                    
+                    <td>Update</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+
+                <tr>
+                    <td>
+                    {% if book.active %}
+                        <span class="btn btn-success">{{book.id}}</span>
+
+                        {% else %}
+                        <span class="btn btn-secondary">{{book.id}}</span>
+                        {% endif %}
+                    </td>
+                    <td>{{book.book_title}}</td>
+                    <td>{{ book.author_name}}</td>
+                    <td>{{book.book_isbn}}</td>
+                    <td>{{book.book_description}}</td>
+                    
+                        <td>
+                        <a href="{% url 'update_book' book.id %}" class="btn btn-secondary btn-sm">Update</a>
+                        </td>
+                        
+                        <td>
+                        <a href="{% url 'delete_book' book.id %}" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+
+
+{% endblock %}

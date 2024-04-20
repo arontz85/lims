@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<title>Zeal For Wisdom</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="HTML, CSS, Components of Computers, Cisco Networking, Microsoft Office Applications, Microsoft SQL Server Addministration and English Language">
+<meta name="Description" content="A simple learning website for students who are interested on studying HTML, CSS, Components of Computers, Cisco Networking, Microsoft Office Applications, Microsoft SQL Server Addministration and English Language">
+<meta property="og:image" content="../images/ari-icon.ico">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="436">
+<meta property="og:image:height" content="228">
+<meta property="og:description" content="atz-Zeal For Wisdom helps students on learning basick skills of HTML, CSS, Components of Computers, Cisco Networking, Microsoft Office Applications, Microsoft SQL Server Addministration and English Language">
+<link rel="icon" href="../images/ari-icon.ico" type="image/x-icon">
+<link rel="stylesheet" href="../css/main.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<style>
+  
+#darkmodemenu {
+  position:absolute;
+  top:-40px;
+  right:16px;
+  padding:5px 20px 10px 18px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  z-index:-1;
+  transition: top 0.2s;
+  user-select: none;
+}
+#darkmodemenu input,#darkmodemenu label {
+  cursor:pointer;
+}
+</style>
+
+<div id="pagetop" class="atz-bar atz-card-2 notranslate">
+  <a href="../../welcome" class="atz-bar-item atz-button atz-hover-none atz-left atz-padding-16" title="Home" style="width:77px">
+    <img src="../images/ari-icon.ico">
+   
+  </a>
+
+  <script>
+    function openLangTab(evtEd, codeName) {
+      var indexEditor, proglanguage, progtablinks;
+      proglanguage = document.getElementsByClassName("proglang");
+      for (indexEditor = 0; indexEditor < proglanguage.length; indexEditor++) {
+        proglanguage[indexEditor].style.display = "none";
+      }
+      progtablinks = document.getElementsByClassName("codeeditorbr-tablink");
+      for (indexEditor = 0; indexEditor < proglanguage.length; indexEditor++) {
+        progtablinks[indexEditor].className = progtablinks[indexEditor].className.replace(" ws-grey", "");
+      }
+      document.getElementById(codeName).style.display = "block";
+      evtEd.currentTarget.className += " ws-grey";
+    }
+    
+    function atz_open() {
+      var x = document.getElementById("myAccordion");
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+        if (document.getElementById("navbtn_menu")) {
+          document.getElementById("navbtn_menu").getElementsByTagName("i")[0].style.display = "none";
+          document.getElementById("navbtn_menu").getElementsByTagName("i")[1].style.display = "inline";
+        }
+      } else {
+        x.style.display = 'none';
+        if (document.getElementById("navbtn_menu")) {
+          document.getElementById("navbtn_menu").getElementsByTagName("i")[0].style.display = "inline";
+          document.getElementById("navbtn_menu").getElementsByTagName("i")[1].style.display = "none";
+        }
+      }
+    }
+    function atz_close() {
+      document.getElementById("myAccordion").style.display = "none";
+    }
+    function open_xs_menu(x) {
+      if (document.getElementById("sectionxs_" + x).innerHTML == "") {
+        document.getElementById("sectionxs_" + x).innerHTML = document.getElementById("nav_" + x).innerHTML;
+      } else {
+        document.getElementById("sectionxs_" + x).innerHTML = "";
+      }
+    }
+    function atz_open_nav(x) {
+      if (document.getElementById("nav_" + x).style.display == "block") {
+        atz_close_nav(x);
+      } else {
+        atz_close_nav("tutorials");
+        atz_close_nav("references");
+        atz_close_nav("exercises");
+        document.getElementById("nav_" + x).style.display = "block";
+        if (document.getElementById("navbtn_" + x)) {
+          document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "none";
+          document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "inline";
+          document.getElementById("navbtn_" + x).classList.add("mystyle");
+        } 
+        if (x == "search") {
+          if (document.getElementById("gsc-i-id1")) {document.getElementById("gsc-i-id1").focus(); }
+        }
+      }
+    }
+    function atz_close_all_nav() {
+      atz_close_nav("tutorials");
+      atz_close_nav("references");
+      atz_close_nav("exercises");
+      atz_close();
+    }
+    function atz_close_nav(x) {
+      document.getElementById("nav_" + x).style.display = "none";
+      if (document.getElementById("navbtn_" + x)) {
+        document.getElementById("navbtn_" + x).getElementsByTagName("i")[0].style.display = "inline";
+        document.getElementById("navbtn_" + x).getElementsByTagName("i")[1].style.display = "none";
+        document.getElementById("navbtn_" + x).classList.remove("mystyle");
+      }
+    }
+    
+    </script>
+
+
+
+  
+<a class="atz-bar-item atz-button atz-hide-small barex bar-item-hover atz-padding-24" href="javascript:void(0)" onclick="atz_open_nav('tutorials')" id="navbtn_tutorials" title="Tutorials" style="width:115px">Tutorials    <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
+<a class="atz-bar-item atz-button atz-hide-small barex bar-item-hover atz-padding-24" href="javascript:void(0)" onclick="atz_open_nav('references')" id="navbtn_references" title="References" style="width:132px">References <i class='fa fa-caret-down'></i><i class='fa fa-caret-up' style="display:none"></i></a>
+<a class="atz-bar-item atz-button atz-hide-small barex bar-item-hover atz-padding-24" href="javascript:void(0)" onclick="atz_open_nav('exercises')" id="navbtn_exercises" title="Exercises" style="width:118px">Exercises <i class='fa fa-caret-down' ></i><i class='fa fa-caret-up' style="display:none"></i></a>
+
+  
+ 
+
+   
+</div>
+
+
+<div class='atz-card-2 topnav notranslate' id='topnav'>
+  <div style="overflow:auto; ">
+    <div class="atz-bar atz-left" style="width:100%;overflow:hidden;height:44px;">
+      <a href='javascript:void(0);' class='topnav-icons fa fa-menu atz-hide-large atz-left atz-bar-item atz-button' onclick='open_menu()' title='Menu'></a>
+      <a href='../../welcome' class='topnav-icons fa fa-home atz-left atz-bar-item atz-button' title='Home'></a>
+      <a class="atz-bar-item atz-button" href='../html_css/default.html' title='HTML and CSS Tutorial' style="padding-left:18px!important;padding-right:18px!important;">HTML and CSS</a>
+      <a class="atz-bar-item atz-button" href='../computers/default.html' title='Computers Tutorial'>Computers</a>
+      <a class="atz-bar-item atz-button" href='../windows/default.html' title='Ms-Windows OS Tutorial'>Windows OS</a>
+      <a class="atz-bar-item atz-button" href='../cisco_networking/default.html' title='Cisco Tutorial'>Cisco Networking</a>
+      <a class="atz-bar-item atz-button" href='../ms_office/default.html' title='Ms-Office Tutorial'>Ms-Office</a>
+      <a class="atz-bar-item atz-button" href='../ms_sqlserver/default.html' title='Ms-SQL Tutorial'>Ms-SQL Server</a>
+      <a class="atz-bar-item atz-button" href='../english_language/default.html' title='English Language Tutorial'>English Language</a>
+     
+    </div>
+  
+<nav id="nav_tutorials" class="atz-hide-small" style="position:absolute;padding-bottom:60px;">
+ <div class="atz-content" style="max-width:1100px;font-size:18px">
+ <span onclick="atz_close_nav('tutorials')" class="atz-button atz-xxxlarge atz-display-topright atz-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
+ <div class="atz-row-padding atz-bar-block">
+  <div class="atz-container" style="padding-left:13px">
+   <h2 style="color:#FFF4A3;"><b>Tutorials</b></h2>
+  </div>
+  <div class="atz-col l3 m6">
+   <h3 class="atz-margin-top">HTML and CSS</h3>
+   <a class="atz-bar-item atz-button" href="../html_css/html.html">Learn HTML</a>
+   <a class="atz-bar-item atz-button" href="../html_css/css.html">Learn CSS</a>
+   
+   
+   <h3 class="atz-margin-top">Computers</h3>
+   <a class="atz-bar-item atz-button" href="../computers/introduction.html">Introduction</a>
+   <a class="atz-bar-item atz-button" href="../computers/hardware.html">Hardwares</a>
+   <a class="atz-bar-item atz-button" href="../computers/software.html">Softwares</a> 
+   <a class="atz-bar-item atz-button" href="../computers/number_system.html">Number System</a>       
+   
+
+
+   <div class="atz-hide-large atz-hide-small">
+  </div>
+  </div>
+  <div class="atz-col l3 m6">
+   <h3 class="atz-margin-top">Cisco Networking</h3>
+   <a class="atz-bar-item atz-button" href="../cisco_networking/introduction.html">Introduction</a>
+   <a class="atz-bar-item atz-button" href="../cisco_networking/network_design.html">Network Design</a>
+   <a class="atz-bar-item atz-button" href="../cisco_networking/network_configuration.html">Network Configuration</a>
+
+
+   <h3 class="atz-margin-top">Ms-Office Apps</h3>
+   <a class="atz-bar-item atz-button" href="../ms_office/ms_access.html">Ms-Access</a>
+   <a class="atz-bar-item atz-button" href="../ms_office/ms_excel.html">Ms-Excel</a>
+   <a class="atz-bar-item atz-button" href="../ms_office/ms_word.html">Ms-Word</a>
+   <a class="atz-bar-item atz-button" href="../ms_office/ms_powerpoint.html">Ms-PowerPoint</a>
+
+  </div> 
+ <div class="atz-col l3 m6">
+   <h3 class="atz-margin-top">Ms-SQL Server</h3>
+   <a class="atz-bar-item atz-button" href="../ms_sqlserver/sql_introduction.html">Introduction</a>
+   <a class="atz-bar-item atz-button" href="../ms_sqlserver/sql_installation.html">SQL Server Installation</a>
+   <a class="atz-bar-item atz-button" href="../ms_sqlserver/sql_configuration.html">SQL Server Configuration</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/tsql.html'>T-SQL</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/maintenance_plan.html'>Maintenance Plan</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/sql_agent.html'>SQL Agent</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/backup_restore.html'>Backup & Restore</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/high_availability_desaster_recovery.html'>HA and DR</a>
+   <a class="atz-bar-item atz-button" href='../ms_sqlserver/powershell.html'>PowerShell</a>
+
+  
+  </div>
+  <div class="atz-col l3 m6">
+
+    <h3 class="atz-margin-top">Windows OS</h3>
+    <a class="atz-bar-item atz-button" href="../windows/introduction.html">Introduction</a>
+    <a class="atz-bar-item atz-button" href='../windows/how_it_works.html'>How It Works</a>
+    <a class="atz-bar-item atz-button" href="../windows/other_types_of_os.html">Other Types of OS</a>
+
+    <h3 class="atz-margin-top">English Language</h3>
+    <a class="atz-bar-item atz-button" href="../english_language/sentence_structure.html">Sentence Structure</a>
+    <a class="atz-bar-item atz-button" href="../english_language/grammar.html">Grammar</a>
+    <a class="atz-bar-item atz-button" href="../english_language/reading.html">Reading</a>
+    <a class="atz-bar-item atz-button" href="../english_language/writting.html">Writting</a>
+    <a class="atz-bar-item atz-button" href="../english_language/listening.html">Listening</a>
+    <a class="atz-bar-item atz-button" href='../english_language/speaking.html'>Speaking</a>
+  </div>
+ </div>
+ </div>
+ <br class="hidesm">
+</nav>
+
+
+<nav id="nav_references" class="atz-hide-small navex" style="position:absolute;background-color:#282A35;color:white;padding-bottom:60px;">
+  <div class="atz-content" style="max-width:1100px;font-size:18px">
+  <span onclick="atz_close_nav('references')" class="atz-button atz-xxxlarge atz-display-topright atz-hover-white ws-hide-860" style="padding-right:30px;padding-left:30px;">&times;</span><br>
+  <div class="atz-row-padding atz-bar-block">
+  <div class="atz-container" style="padding-left:13px">
+    <h2 style="color:#FFF4A3;"><b>References</b></h2>
+   </div>
+ 
+   <div class="atz-col l3 m6">
+     <h3 class="atz-margin-top">Computers</h3>
+     <a class="atz-bar-item atz-button" href='../computers/computers_references.html'>Computers Reference</a>
+     
+     <h3 class="atz-margin-top">Cisco Networking</h3>
+     <a class="atz-bar-item atz-button" href='../cisco_networking/cisco_networking_references.html'>Cisco Networking Reference</a>
+   </div>
+ 
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top">Ms-Office</h3>
+    <a class="atz-bar-item atz-button" href='../ms_office/ms_office_references.html'>Ms-Office Reference</a>
+    
+    <h3 class="atz-margin-top">Ms-SQL Server</h3>
+    <a class="atz-bar-item atz-button" href='../ms_sqlserver/ms_sqlserver_references.html'>Ms-SQL Server Reference</a>
+   </div>
+   
+   <div class="atz-col l3 m6">
+     <h3 class="atz-margin-top">HTML and CSS</h3>
+    <a class="atz-bar-item atz-button" href='../html_css/html_css_references.html'>HTML and CSS Reference</a>
+ 
+     <h3 class="atz-margin-top">English Language</h3>
+     <a class="atz-bar-item atz-button" href='../english_language/english_language_references.html'>English Language References</a>
+    </div>
+ 
+   <div class="atz-col l3 m6">
+       
+   </div>
+   
+  </div>
+  <br class="hidesm">
+  </div>
+ </nav>
+ 
+ <nav id="nav_exercises" class="atz-hide-small" style="position:absolute;padding-bottom:60px;">
+  <div class="atz-content" style="max-width:1100px;font-size:18px">
+  <span onclick="atz_close_nav('exercises')" class="atz-button atz-xxxlarge atz-display-topright atz-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
+  <div class="atz-row-padding atz-bar-block">
+  <div class="atz-container" style="padding-left:13px">
+    <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
+   </div>
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top"><a class="ws-btn ws-yellow atz-hover-text-white" style="width:155px;font-size:21px" href="index.html">Exercises</a></h3>
+    <a class="atz-bar-item atz-button" href="../html_css/html_css_exercises.html">HTML and CSS</a>
+    <a class="atz-bar-item atz-button" href="../computers/computers_exercises.html">Computers</a>
+    <a class="atz-bar-item atz-button" href="../windows/ms_windows_exercises.html">Windows OS</a>
+    <a class="atz-bar-item atz-button" href="../cisco_networking/cisco_networking_exercises.html">Cisco Networking</a>
+    <a class="atz-bar-item atz-button" href="../ms_office/ms_office_exercises.html">Ms-Office</a>
+    <a class="atz-bar-item atz-button" href="../ms_sqlserver/ms_sqlserver_exercises.html">Ms-SQL Server</a>
+    <a class="atz-bar-item atz-button" href="../english_language/english_language_exercises.html">English Language</a>
+   
+   </div>
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top"><a class="ws-btn ws-yellow atz-hover-text-white" style="width:135px;font-size:21px" href="index.html">Quizzes</a></h3>
+    <a class="atz-bar-item atz-button" href="../html_css/html_css_quiz.html" target="_top">HTML and CSS</a>
+    <a class="atz-bar-item atz-button" href="../computers/computers_quiz.html" target="_top">Computers</a>
+    <a class="atz-bar-item atz-button" href="../windows/ms_windows_quiz.html" target="_top">Windows OS</a>
+    <a class="atz-bar-item atz-button" href="../cisco_networking/cisco_networking_quiz.html" target="_top">Cisco Networking</a>
+    <a class="atz-bar-item atz-button" href="../ms_office/ms_office_quiz.html" target="_top">Ms-Office</a>
+    <a class="atz-bar-item atz-button" href="../ms_sqlserver/ms_sqlserver_quiz.html" target="_top">Ms-SQL Server</a>
+    <a class="atz-bar-item atz-button" href="../english_language/english_language_quiz.html" target="_top">English Language</a>
+ 
+   </div>
+   <div class="atz-col l3 m6">
+ 
+   </div>
+  </div>
+  <br class="hidesm">
+  </div>
+
+ </nav>
+
+
+ <nav id="nav_exercises" class="atz-hide-small" style="position:absolute;padding-bottom:60px;">
+  <div class="atz-content" style="max-width:1100px;font-size:18px">
+  <span onclick="atz_close_nav('exercises')" class="atz-button atz-xxxlarge atz-display-topright atz-hover-white sectionxsclosenavspan" style="padding-right:30px;padding-left:30px;">&times;</span><br>
+  <div class="atz-row-padding atz-bar-block">
+  <div class="atz-container" style="padding-left:13px">
+    <h2 style="color:#FFF4A3;"><b>Exercises and Quizzes</b></h2>
+   </div>
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top"><a class="ws-btn ws-yellow atz-hover-text-white" style="width:155px;font-size:21px" href="../exercises/index.html">Exercises</a></h3>
+    <a class="atz-bar-item atz-button" href="../html_css/html_css_exercises.html">HTML and CSS</a>
+    <a class="atz-bar-item atz-button" href="../computers/computers_exercises.html">Computers</a>
+    <a class="atz-bar-item atz-button" href="../ms_windows/ms_windows_exercises.html">Windows OS</a>
+    <a class="atz-bar-item atz-button" href="../cisco_networking/cisco_networking_exercises.html">Cisco Networking</a>
+    <a class="atz-bar-item atz-button" href="../ms_office/ms_office_exercises.html">Ms-Office</a>
+    <a class="atz-bar-item atz-button" href="../ms_sqlserver/ms_sqlserver_exercises.html">Ms-SQL Server</a>
+    <a class="atz-bar-item atz-button" href="../english_language/english_language_exercises.html">English Language</a>
+    
+   </div>
+   <div class="atz-col l3 m6">
+    <h3 class="atz-margin-top"><a class="ws-btn ws-yellow atz-hover-text-white" style="width:135px;font-size:21px" href="quiztest/default.html">Quizzes</a></h3>
+    <a class="atz-bar-item atz-button" href="../html_css/html_css_quiz.html" target="_top">HTML and CSS</a>
+    <a class="atz-bar-item atz-button" href="../computers/computers_quiz.html" target="_top">Computers</a>
+    <a class="atz-bar-item atz-button" href="../ms_windows/ms_windows_quiz.html" target="_top">Windows OS</a>
+    <a class="atz-bar-item atz-button" href="../cisco_networking/cisco_networking_quiz.html" target="_top">Cisco Networking</a>
+    <a class="atz-bar-item atz-button" href="../ms_office/ms_office_quiz.html" target="_top">Ms-Office</a>
+    <a class="atz-bar-item atz-button" href="../ms_sqlserver/ms_sqlserver_quiz.html" target="_top">Ms-SQL Server</a>
+    <a class="atz-bar-item atz-button" href="../english_language/english_language_quiz.html" target="_top">English Language</a>
+    
+   </div>
+   <div class="atz-col l3 m6">
+    
+   </div>
+  </div>
+  <br class="hidesm">
+  </div>
+ </nav>
+
+  </div>
+</div>
+
+<div id='myAccordion' class="atz-card-2 atz-center atz-hide-large atz-hide-medium ws-grey" style="width:100%;position:absolute;display:none;">
+  <a href="javascript:void(0)" onclick="atz_close()" class="atz-button atz-xxlarge atz-right">&times;</a><br>
+  <div class="atz-container atz-padding-32">
+    <a class="atz-button atz-block" style="font-size:22px;" onclick="open_xs_menu('tutorials');" href="javascript:void(0);">Tutorials <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_tutorials" class="atz-left-align atz-show" style="background-color:#282A35;color:white;"></div>
+    <a class="atz-button atz-block" style="font-size:22px;" onclick="open_xs_menu('references')" href="javascript:void(0);">References <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_references" class="atz-left-align atz-show" style="background-color:#282A35;color:white;"></div>
+    <a class="atz-button atz-block" style="font-size:22px;" onclick="open_xs_menu('exercises')" href="javascript:void(0);">Exercises <i class='fa fa-caret-down'></i></a>
+    <div id="sectionxs_exercises" class="atz-left-align atz-show" style="background-color:#282A35;color:white;"></div>
+
+  </div>
+</div>
+
+
+<div class='atz-sidebar atz-collapse' id='sidenav'>
+  <div id='leftmenuinner'>
+    <div id='leftmenuinnerinner'>
+     
+        <!--  <a href='javascript:void(0)' onclick='close_menu()' class='atz-button atz-hide-large atz-large atz-display-topright' style='right:16px;padding:3px 12px;font-weight:bold;'>&times;</a>-->
+
+
+
+
+<div class="sidesection">
+
+  <h4 align="center">Star Topology</h4>
+  <p align="center">
+  <img src="../images/network-gif2.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+</p>
+<h4 align="center">Ring Topology</h4>
+  <p align="center">
+  <img src="../images/network-gif3.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </p>
+  <h4 align="center">Bus Topology</h4>
+  <p align="center">
+  <img src="../images/network-gif4.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+   </p>
+</div>
+
+
+
+
+</div>
+  </div>
+</div>
+<div class='atz-main atz-light-grey' id='belowtopnav' style='margin-left:220px;'>
+  <div class='atz-row atz-white'>
+    <div class='atz-col l10 m12' id='main'>
+      <div id='mainLeaderboard' style='overflow:hidden;'>
+        <!-- MainLeaderboard-->
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+
+        
+        <div id="adngin-main_leaderboard-0">
+          
+          <h2 align="left" bgcolor="#04aa6b"><font color="blue">Zeal For Wisdom</font></h2>
+         
+        </div>
+        <hr>
+
+        <!-- adspace leaderboard -->
+
+      </div>
+<h1>Cisco Networking<span class="color_h1"> Quizzes</span></h1>
+
+<div class="atz-panel atz-info intro">
+	
+			
+       
+        <p> 
+        
+        <h4><mark style="background-color: pink;">Quizzes</mark></h4>
+        <h4>Will be available soon.</h4>
+        <!--Aaron
+        <iframe  width="420" height="315" src="CiscoClassWork.pdf"></iframe>
+        <iframe  width="420" height="315" src="StaticRouting.pdf"></iframe>
+        <iframe  width="420" height="315" src="RIPRouting.pdf"></iframe>
+        -->
+
+        
+        </p>
+
+</div>
+
+
+<hr>
+
+
+<style>
+#img_mylearning {
+  max-width:100%;
+}
+</style>
+
+
+<br>
+
+<style>  
+
+#atz_cert_badge {
+  position: absolute;
+  right: 5%;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: -20%;
+}
+
+#atz_cert_arrow {
+  position: absolute;
+  right: 220px;
+  width: 220px;
+  transform: rotate(10deg);
+  bottom: 0;
+  z-index: 1;
+}
+
+#getdiploma {
+  position: relative;
+  padding: 0 60px 50px 60px;
+  margin-bottom: 125px;
+  border-radius: 16px;
+ /* background-color: #282A35;*/
+  background-image: url(../images/showcase.jpg);
+  background-repeat: no-repeat;
+  
+  color: #FFC0C7;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#getdiploma h2 {
+  font-size:50px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma p {
+  font-size: 42px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Sans Pro', sans-serif
+}
+
+#getdiploma a {
+  border-radius: 50px;
+  margin-top: 50px;
+  font-size: 18px;
+  background-color: #04AA6D;
+  padding: 17px 55px
+}
+
+#getdiploma a:hover,
+#getdiploma a:active {
+  background-color: #059862 !important;
+}
+
+
+@media screen and (max-width: 1442px) {
+  #atz_cert_arrow {
+    right: 212px;
+    bottom: -15px;
+  }
+}
+
+
+@media screen and (max-width: 1202px) {
+  #atz_cert_arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #atz_cert_arrow {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  #atz_cert_arrow {
+    display: none;
+  }
+  #getdiploma h2 {
+    font-size: 44px;
+  }
+  #getdiploma p {
+    font-size: 30px;
+  }
+
+  #getdiploma a {
+    width: 100%;
+  }
+  #atz_cert_badge {
+    top: -16px;
+    right: -8px;
+    width: 100px;
+  }
+  #getdiploma  {
+    margin-bottom: 55px;
+  }
+}
+</style>
+
+<div class="atz-panel" id="getdiploma">
+
+  <h2>Zeal For Wisdom</h2>
+
+
+<p>Learn Today <span id="hey">For</span> <span id="coursetopic"></span> Better Tomorrow</p>
+  
+<script>
+var foldername;
+function getCourseFolder() {
+  var pathname = window.location.pathname;
+  if (pathname.substr(0,1) == "../index.html") {pathname = pathname.substr(1);}
+  pos = pathname.indexOf("../index.html");
+  foldername = pathname.substr(0, pos);
+  foldername = foldername.toUpperCase();
+  if (foldername == "JS") foldername = "JavaScript";
+  if (foldername == "QUIZTEST" || foldername == "EXERCISES") {
+    document.getElementById("hey").innerText = "a";
+  }
+  if (foldername == "QUIZTEST" || foldername == "EXERCISES") foldername = "";
+  if (foldername == "CS") foldername = "C#";
+  if (foldername == "CYBERSECURITY") foldername = "Cyber Security";  
+  if (foldername == "CPP") foldername = "C++";
+  document.getElementById("coursetopic").innerText = foldername;
+}
+getCourseFolder();
+</script>
+
+<!--Aaron ================
+<a class="atz-btn atz-margin-bottom" href="https://shop.atzschools.com/collections/course-catalog" target="_blank">Get certified</a>
+
+<svg id="atz_cert_arrow" viewBox="0 0 170 143" fill="none" xmlns="http://www.atz.org/2000/svg">
+<path d="M9.7747 42.7064C9.7747 42.7064 19.5575 77.2951 44.4558 84.8113C62.0225 90.1142 81.0061 80.1196 77.791 68.3309C76.0904 62.0955 69.0574 62.4735 65.5106 65.8444C59.1003 71.9368 67.8591 89.7423 77.9205 96.1324C112.816 118.295 161.943 84.5867 161.943 84.5867" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<path d="M159.804 93.8429L162.704 84.4917L152.715 80.8293" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg id="atz_cert_badge" data-name="atz_cert_badge" xmlns="http://www.atz.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1{fill:#04aa6b;}.cls-2{font-size:23px;}.cls-2,.cls-3,.cls-4{fill:#fff;}.cls-2,.cls-3{font-family:RobotoMono-Medium, Roboto Mono;font-weight:500;}.cls-3{font-size:20.08px;}</style></defs><circle class="cls-1" cx="150" cy="150" r="146.47" transform="translate(-62.13 150) rotate(-45)"/><text class="cls-2" transform="translate(93.54 63.89) rotate(-29.5)">w</text><text class="cls-2" transform="translate(107.13 56.35) rotate(-20.8)">3</text><text class="cls-2" transform="matrix(0.98, -0.21, 0.21, 0.98, 121.68, 50.97)">s</text><text class="cls-2" transform="translate(136.89 47.84) rotate(-3.47)">c</text><text class="cls-2" transform="translate(152.39 47.03) rotate(5.12)">h</text><text class="cls-2" transform="translate(167.85 48.54) rotate(13.72)">o</text><text class="cls-2" transform="translate(182.89 52.35) rotate(22.34)">o</text><text class="cls-2" transform="matrix(0.86, 0.52, -0.52, 0.86, 197.18, 58.36)">l</text><text class="cls-2" transform="matrix(0.77, 0.64, -0.64, 0.77, 210.4, 66.46)">s</text><text class="cls-3" transform="translate(35.51 186.66) rotate(69.37)"> </text><text class="cls-3" transform="matrix(0.47, 0.88, -0.88, 0.47, 41.27, 201.28)">C</text><text class="cls-3" transform="matrix(0.58, 0.81, -0.81, 0.58, 48.91, 215.03)">E</text><text class="cls-3" transform="matrix(0.67, 0.74, -0.74, 0.67, 58.13, 227.36)">R</text><text class="cls-3" transform="translate(69.16 238.92) rotate(39.44)">T</text><text class="cls-3" transform="matrix(0.85, 0.53, -0.53, 0.85, 81.47, 248.73)">I</text><text class="cls-3" transform="translate(94.94 256.83) rotate(24.36)">F</text><text class="cls-3" transform="translate(109.34 263.09) rotate(16.83)">I</text><text class="cls-3" transform="translate(124.46 267.41) rotate(9.34)">E</text><text class="cls-3" transform="translate(139.99 269.73) rotate(1.88)">D</text><text class="cls-3" transform="translate(155.7 270.01) rotate(-5.58)"> </text><text class="cls-3" transform="translate(171.32 268.24) rotate(-13.06)"> </text><text class="cls-2" transform="translate(187.55 266.81) rotate(-21.04)">.</text><text class="cls-3" transform="translate(203.27 257.7) rotate(-29.24)"> </text><text class="cls-3" transform="translate(216.84 249.83) rotate(-36.75)"> </text><text class="cls-3" transform="translate(229.26 240.26) rotate(-44.15)">2</text><text class="cls-3" transform="translate(240.39 229.13) rotate(-51.62)">0</text><text class="cls-3" transform="translate(249.97 216.63) rotate(-59.17)">2</text><text class="cls-3" transform="matrix(0.4, -0.92, 0.92, 0.4, 257.81, 203.04)">2</text><path class="cls-4" d="M196.64,136.31s3.53,3.8,8.5,3.8c3.9,0,6.75-2.37,6.75-5.59,0-4-3.64-5.81-8-5.81h-2.59l-1.53-3.48,6.86-8.13a34.07,34.07,0,0,1,2.7-2.85s-1.11,0-3.33,0H194.79v-5.86H217.7v4.28l-9.19,10.61c5.18.74,10.24,4.43,10.24,10.92s-4.85,12.3-13.19,12.3a17.36,17.36,0,0,1-12.41-5Z"/><path class="cls-4" d="M152,144.24l30.24,53.86,14.94-26.61L168.6,120.63H135.36l-13.78,24.53-13.77-24.53H77.93l43.5,77.46.15-.28.16.28Z"/></svg>
+
+-->
+</div>
+
+
+
+<br>
+<br>
+
+<div class="atz-clear nextprev">
+<!--Aaron
+  
+<a class="atz-left atz-btn" href="../default.html">&#10094; Home</a>
+<a class="atz-right atz-btn" href="html_intro.html">Next &#10095;</a>
+  -->
+</div>
+
+<div id="mypagediv2" style="position:relative;text-align:center;"></div>
+<br>
+
+</div>
+<div class="atz-col l2 m12" id="right">
+  <img src="../images/BGImage.jpg" width="150px">
+<div class="sidesection">
+    <h4>About me</h4>
+  <img src="../images/Aron.jpg"  width="130px" height="auto" alt="computers" loading="lazy">
+ <h6 align="left" color="cyan">More than ten years experience working in a variety of settings including higher education.</h6>
+
+ <hr>
+
+<h4>Lab Work</h4>
+<img src="../images/work.jpg"  width="150px" height="auto" alt="computers" loading="lazy">
+
+<hr>
+
+<h4>Contact us</h4>
+<form class="frm" action="https://formsubmit.co/aron.tesfie85@gmail.com" method="post">
+  
+  <p>Full Name:
+  <input class="txt" type="text" name="Name" placeholder="Your Name" required ></p> 
+  <p>Email:
+  <input class="txt" type="email" name="Email" placeholder="Your email" required></p>
+  <p>Comment:
+  <textarea class="txtarea" name="Message" placeholder="Type your comments" required></textarea></p>
+  <button class="atz-btn atz-margin-bottom" type="submit">Submit</button>
+</form>
+
+<hr>
+<!--Aaron
+<div id="skyscraper">
+  
+</div>
+-->   
+  
+</div>
+  
+<style>
+.ribbon-vid {
+  font-size:12px;
+  font-weight:bold;
+  padding: 6px 20px;
+  left:-20px;
+  top:-10px;
+  text-align: center;
+  color:black;
+  border-radius:25px;
+}
+</style>
+
+
+<div class="sidesection">
+<h4>Computers</h4>
+<img src="../images/computers.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+</div>
+
+<div class="sidesection">
+  <h4>Windows OS</h4>
+   <img src="../images/windows.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+
+<div class="sidesection">
+  <h4>Cisco Networking</h4>
+   <img src="../images/cisco.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+
+  <div class="sidesection">
+    <h4>Ms-Office</h4>
+     <img src="../images/office.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+    </div>
+
+    <div class="sidesection">
+      <h4>Ms-SQL</h4>
+       <img src="../images/sql.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+      </div>
+
+      <div class="sidesection">
+        <h4>English</h4>
+         <img src="../images/english.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+        </div>
+
+<div class="sidesection">
+  <h4>Visit us here</h4>
+  <div class="sharethis">
+    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new/" target="_blank" title="Facebook"><img src="../images/email.jfif" height="20px"></a>
+    
+    <a href="https://www.facebook.com/profile.php?id=100012691334408" target="_blank" title="Facebook"><img src="../images/facebook.png" height="20px"></a>
+    <a href="https://atz-zeal-for-wisdom.blogspot.com/" target="_blank" title="our page"><img src="../ari-icon.ico" height="20px"></a>
+    </div>
+</div>
+
+
+
+<style>
+#courses_get_started_btn {
+text-decoration:none !important;
+background-color:#04AA6D;
+width:100%;
+border-bottom-left-radius:5px;
+border-bottom-right-radius:5px;
+padding-top:10px;
+padding-bottom:10px;
+font-family: 'Source Sans Pro', sans-serif;
+}
+#courses_get_started_btn:hover {
+background-color:#059862!important;
+}
+</style>
+
+
+
+<div class="sidesection" id="moreAboutSubject">
+  <div class="sidesection">
+    <h4>Networking</h4>
+    <img src="../images/networking-gif.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+    </div>
+</div>
+
+<div class="sidesection" style="margin-top:20px;margin-bottom:20px;">
+  
+  <!--Aaron
+<a id="lowerfeatureshowcaselink" class="showcaseupgrade" href="../pro/index.html" target="_blank">
+<picture id="lowerfeatureshowcase">
+  <source id="lowerfeatureshowcase3001" srcset="/images/img_upgrade_300.png" media="(max-width: 990px)" style="border-radius: 5px;">
+  <source id="lowerfeatureshowcase120" srcset="/images/img_upgrade_120.png" media="(max-width: 1260px)" style="border-radius: 5px;">
+  <source id="lowerfeatureshowcase160" srcset="/images/img_upgrade_160.png" media="(max-width: 1700px)" style="border-radius: 5px;">
+  <img id="lowerfeatureshowcase300" src="https://www.atzschools.com/images/img_upgrade_300.png" alt="Upgrade" style="width:auto;border-radius: 5px;">
+</picture>
+</a>
+-->
+<div class="sidesection">
+  <h4>Star Topology</h4>
+  <img src="../images/network-gif2.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+
+
+<div class="sidesection">
+  <h4>Ring Topology</h4>
+  <img src="../images/network-gif3.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+
+
+<div class="sidesection">
+  <h4>Bus Topology</h4>
+  <img src="../images/network-gif4.gif"  width="150px" height="auto" alt="computers" loading="lazy">
+  </div>
+</div>
+
+<div id="stickypos" class="sidesection" style="text-align:center;position:sticky;top:50px;">
+  <div id="stickyadcontainer">
+    <div style="position:relative;margin:auto;">
+      
+      <div id="adngin-sidebar_sticky-0"></div>
+        <script>
+        function secondSnigel() {
+          if(window.adngin && window.adngin.adnginLoaderReady) {
+            if (Number(atz_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {         
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+              } else {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+              }
+            } else {
+              if (document.getElementById("adngin-mid_content-0")) {
+                adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+              }
+            }
+          } else {
+            window.addEventListener('adnginLoaderReady', function() {
+              if (Number(atz_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky", "mid_content" ]); });
+                } else {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["sidebar_sticky"]); });
+                }
+              } else {
+                if (document.getElementById("adngin-mid_content-0")) {
+                  adngin.queue.push(function(){  adngin.cmd.startAuction(["mid_content"]); });
+                }
+              }
+            });
+          }
+        }
+      </script>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+uic_r_c()
+</script>
+
+</div>
+</div>
+
+<div id="footer" class="footer atz-container atz-white">
+
+<hr>
+
+<div style="overflow:auto">
+  <div class="bottomad">
+   <div id="adngin-bottom_left-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+     <div id="adngin-bottom_right-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+  </div>
+</div>
+
+<hr>
+
+<div class="atz-center atz-small atz-opacity">
+  <p class="atz-medium">
+    atz-Zeal For Wisdom is optimized for learning. Visit here for <a href="https://atz-zeal-for-wisdom.blogspot.com" class="atz-hover-text-green">Additional Materials</a><br> 
+    <a href="https://www.privacypolicygenerator.info/live.php?token=gG2W4zhr2x91eacKLHgM9BtM1g2xjEqS" class="atz-hover-text-green">cookie and privacy policy</a>.
+    <a href="#" class="atz-hover-text-green">Copyright </a> &copy; by Aron T.Zeru, 2023. All Rights Reserved.<br><br></p>
+   </div>
+<div class="atz-center atz-small">
+<a href="../index.html"><img src="../ari-icon.ico"></a>
+
+  </div>
+<br><br>
+</div>
+</div>
+<script src="../lib/atzschools_footer721a.js?update=20220202"></script>
+
+<script>
+  MyLearning.loadUser('footer');
+  function docReady(fn) {
+    document.addEventListener("DOMContentLoaded", fn);
+    if (document.readyState === "interactive" || document.readyState === "complete" ) {
+      fn();
+    }
+  }
+  uic_r_z();
+  uic_r_d()
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content%}
+</div>
+
+<div class="row">
+    <nav class="navbar bg-body-light">
+       <div class="container-fluid justify-content-center align-items-center">
+        <form class="d-flex" role="search" action="issuedbooks/search" method="POST">
+            {% csrf_token %}
+            
+            <input class="form-control me-2" name="searched" type="search" placeholder="Search by reader" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+       </div>
+    </nav>
+</div>
+
+    {% for j in issued%}
+    <option value="{{j.reader_name}}"></option>
+  {% endfor %}
+</datalist>
+{% for msg in messages %}
+<div class="alert alert-success" role="alert">
+ <a href="#" class="alert-link"></a>{{msg}}.
+</div
+{% endfor %}
+<div class="form" style="margin: 20px;">
+<p>{{ issued|length }} book(s) issued</p>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+<div class="container" style="overflow-y: auto; height: 400px;">
+<table class="table table-hover">
+
+<thead>
+<tr>
+<td>Issued ID</td> 
+<td>Reader Details</td>
+<td>Issue Date</td>
+<td>Due Date</td>
+<td>Book Details</td>
+<td>Book Condition</td>
+<td>Return</td>
+
+
+</tr>
+</thead>
+<tbody>
+{% for i in issued %}
+
+<tr>
+<td>{{i.id}}</td>
+<td>{{i.reader_details}}</td>
+<td>{{i.issue_date}}</td>
+<td>{{i.due_date}}</td>
+<td>{{i.book_details}}</td>
+<td>{{i.book_condition}}</td>
+
+<td>
+    <a href="{% url 'return_issued_book' i.id %}" class="btn btn-secondary btn-sm">Return</a>
+    </td>
+   
+</tr>
+
+{% endfor %}
+</tbody>
+</table>
+</div>
+</div>
+{% endblock main_content %}

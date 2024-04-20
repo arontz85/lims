@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% load static %}
+
+{% block main_content%}
+
+<!--<h1>I am in readers page</h1>-->
+<div class="container-flex text-center justify-content-center align-items-center" style="padding-top: 10px; padding-bottom: 20px; margin-top: 10px; vertical-align: middle;">
+
+    <div class="row justify-content-center align-middle" style="margin-top: 10px; height: 60px;">
+
+        <div class="col-md-4 text-light" style="background-color: #4B088A;">
+            <h4 style="margin-top: 15px;">Issue Book Form</h4>
+        </div>
+
+    <div class="row">
+      
+         <div class="container" style="overflow-y:auto; width:450px; height: auto; background:#CEECF5">
+            <form class="d-flex" action="save_issued_book" method="POST">
+                <div class="col-md-8">
+                <div class="row">
+                <div class="mb-3">
+                   {% csrf_token %}
+                <h4>Readers Details</h4>
+                <select name="reader_details">
+                    <option selected disabled="True">----Select Reader----</option>
+                {%for r in loadReader%}
+                <option id="readerDetails">
+                    {{r.reference_id}} - {{r.reader_name}}
+                </option>
+                {% endfor %}
+            </select>
+
+                <table>
+                 <tr>
+                    <td>Issue Date:</td>
+                     <td><input type="date" name="issueDate"></td>
+                </tr>
+                <tr>
+                    <td>Due Date:</td>
+                    <td><input type="date" name="dueDate"></td>
+                </tr>
+            </table>
+                
+<hr>
+<hr>
+                   <h4>Books Details</h4> 
+                   <select name="book_details">
+                    <option selected disabled="True">----Select Book----</option>
+                    {%for b in loadBook%}
+                  
+                    <option id="bookDetails">
+                        {{b.book_isbn}} - {{b.book_title}}
+                    </option>
+               
+                    {% endfor %}
+                   </select >
+                   <table>
+                    <tr>
+                       <td>Book Condition:</td>
+                        <td><textarea name="bookCondition"></textarea></td>
+                   </tr>
+                   
+               </table>
+               
+                </div>
+                </div>
+                <div class="row">
+                    <button class="btn btn-primary" type="submit">Issue</button>
+                    
+                   
+                </div>
+
+               </div> 
+                
+            </form>
+            <ul style="text-align: left; vertical-align: middle; padding-left: 15px;"">
+                <li><small>Readers should not register multiple times.</small></li>
+                <li><small>Duplicate reader regidtrations will be deactivated.</small></li>
+                <li><small>Contact information provided above must be correct and subject to verification.</small></li>
+            </ul>
+        </div>
+  
+
+ 
+</div>
+
+</div>
+
+
+
+{% endblock %}

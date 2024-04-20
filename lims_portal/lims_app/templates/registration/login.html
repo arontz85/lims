@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% extends "index_userslogin.html" %}
+{% load static %}
+
+{% block main_content%}
+<main role="main">
+    
+<div class="jambotron">
+    
+    <div class="container">
+        <div class="row">
+        <div class="col">
+        <img src="{% static '/arilogo.ico' %}" class="rounded float-start"  alt="ATZ" height="200" style="margin-right: 200px;"> 
+        <ul>
+            
+            <li>Imagination and creativity – Books have the power to take us to far away places where we can be superheroes or be dinosaurs. There are no limits on where the imagination can take us.</li>
+            <li>Social skills and interaction – Children can practice their listening skills with you as you read, and you can point and find objects featured in the book.</li>
+            
+            
+        </ul>
+        </div>
+        <div class="col">
+            <nav class="navbar bg-body-light">
+               <div class="container-fluid justify-content-center align-items-center">
+                <form class="d-flex" role="search" action="" method="POST">
+                    {% csrf_token %}
+                                        
+                    <table class="table" style="margin-top: 20px;">
+                        <tr><td colspan="2" style="text-align: left; vertical-align: middle; padding-left: 15px; background-color: cadetblue;" >
+                            <h6>You are a staff member? Login here.
+                              If you are not a staff click <a href="../../welcome" style="color: white;">here</a>
+                            </h6>
+                        </td></tr>
+                        
+                     <tr>
+                        <td style="text-align: left; vertical-align: middle; padding-left: 15px; background-color: cornflowerblue;">Username:</td>
+                        <td style="background-color: cornflowerblue;">
+                      {{form.username}}
+                      </td>
+                     </tr>
+                      <tr>
+                        <td style="text-align: left; vertical-align: middle; padding-left: 15px; background-color: cornflowerblue;">Password:</td>
+                        <td style="background-color: cornflowerblue;">
+                            {{form.password}}
+                    </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="text-align: right; vertical-align: middle; padding-left: 15px; background-color: cornflowerblue;">
+                    <button class="btn btn-success" type="submit">Login</button>
+                    </td>
+                    </tr>
+                    </table>
+                    
+
+                  </form>
+                  
+               </div>
+            </nav>
+            <ul>
+                           
+                <li>Building empathy – In the world we live in today there are a lot of big feelings floating around. Even the tiniest of tales can teach children about sharing, caring, death, illness etc.</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h4>These are just some the benefits of raising an early reader:</h4>
+            <ul>
+                <li>Setting up children for success – Children are sponges. Why not help give them a leg up?</li>
+                <li>A workout for the mind – It is never too early to get those wheels turning.</li>
+                <li>A thirst for knowledge – Leave your young reading fans wanting more. The more exposure to books and reading the better.</li>
+                <li>A source of fun – Make story time part of your daily routine. If you are so inclined add songs, change your voice for different characters. The options are truly endless.</li>
+            
+            </ul>
+        </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Why reading is important?</h2>
+        <p>Reading is good for you because it improves your focus, memory, empathy, and communication skills. It can reduce stress, improve your mental health, and help you live longer. Reading also allows you to learn new things to help you succeed in your work and relationships. </p>
+      </div>
+      <div class="col">
+        <h2>Key Benefits</h2>
+        <ul>
+            <li>Gain valuable knowledge</li>
+            <li>Improve your focus</li>
+            <li>Improve your memory</li>
+            <li>Improve your communication skills</li>
+            <li>Reduce stress</li>
+            <li>Improve your mental health</li>
+            <li>Live longer</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h2>Thougt for the day!</h2>
+        <p>Never give up. Today is hard, tomorrow will be worse, but the day after tomorrow will be sunshine. Never give up on your dreams, no matter how painful and difficult your journey is.</p>
+      </div>
+    </div>
+    <hr>
+  </div>
+  </main>
+<footer class="container">
+    &copy; ATZ Library 2024
+</footer>
+{% endblock %}
