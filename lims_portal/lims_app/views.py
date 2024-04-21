@@ -18,31 +18,17 @@ from django.contrib.auth.models import auth
 
 @login_required(login_url="/accounts/login/")
 def home(request):
+    
     return render(request,'home.html',context={"current_tab": "home"})
 
 #@login_required(login_url="/accounts/login/")
 def welcome(request):
     return render(request,'welcome.html',context={"current_tab": "welcome"})
 
-#def html(request):
-#    return render(request,'html',context={"html": "html"})
-''''
-def signin(request):
-    userCategory=request.POST['user_category']
-    userID=request.POST['user_id']
-    userEmail=request.POST['user_email']
-    form = loginForm()
-    if request.method=='POST':
-        form=loginForm(request.POST, category=userCategory, reference_id=userID,reader_email=userEmail)
-        if form.is_valid():
-            return redirect(request.POST, '/home')
-        else:
-            return redirect(request.POST, '/welcome')
-        
-    return render(request,'welcome.html')
-'''
+
 def logout_view(request):
     logout(request)
+    messages.success(request, "You Loged out successfuly")
     return redirect('login')
 
 
@@ -62,7 +48,7 @@ def save_issued_book(request):
                             due_date=request.POST['dueDate'], 
                             book_condition=request.POST['bookCondition'] )
     issuedbooks.save()
-    messages.success(request, "Book added successfuly")
+    messages.success(request, "Book issued successfuly")
     return redirect('/view_issued_books')
     
     
@@ -78,6 +64,7 @@ def add_issued_book(request):
 def return_issued_book(request, pk):
      return_book=issuedBooks.objects.get(id=pk)
      return_book.delete()
+     messages.success(request, "Book returned successfuly")
      return redirect('/view_issued_books')   
 
 @login_required(login_url="/accounts/login/")      
