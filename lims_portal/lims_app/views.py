@@ -151,6 +151,7 @@ def update_reader(request, pk):
         form=readerForm(request.POST, instance=update_reader)
         if form.is_valid():
             form.save()
+            messages.success(request, "Reader's data has been updated")
             return redirect('/readers')
     context = {'form':form}
     return render(request,'update_reader.html',context)

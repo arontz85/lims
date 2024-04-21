@@ -56,11 +56,7 @@ urlpatterns = [
     
     path('books', books),
     path('returns', returns),
-    #path('shop',shopping),
-
-    #path('add_new_book_instance', views.add_new_book_instance, name='add_new_book_instance'),
-   # path('add_book_issue', views.add_book_issue, name='book_issue'),
-   
-   # path('return_book/<int:id>',views.return_issued_book,name="return_issued_book"),
-   # path('edit_issued/<int:id>',views.edit_issued,name="edit_issued"),
+    
+ 
+  
 ]
